@@ -1,0 +1,152 @@
+----------------------------------------------- Python built-in functions -----------------------------------------------
+
+| Alphabet | Built-in Function | Description                                            |
+| -------- | ----------------- | ------------------------------------------------------ |
+| A        | `abs()`           | Returns the absolute (positive) value of a number      |
+|          | `aiter()`         | Returns an asynchronous iterator                       |
+|          | `all()`           | Returns `True` if all elements in an iterable are true |
+|          | `anext()`         | Returns next item from an async iterator               |
+|          | `any()`           | Returns `True` if any element in an iterable is true   |
+|          | `ascii()`         | Returns a printable representation of an object        |
+| B        | `bin()`           | Converts a number to binary format                     |
+|          | `bool()`          | Converts a value to Boolean (`True` or `False`)        |
+|          | `breakpoint()`    | Starts the debugger                                    |
+|          | `bytearray()`     | Returns a mutable byte array                           |
+|          | `bytes()`         | Returns an immutable bytes object                      |
+| C        | `callable()`      | Checks if an object can be called                      |
+|          | `chr()`           | Converts ASCII value to character                      |
+|          | `classmethod()`   | Converts a method into a class method                  |
+|          | `compile()`       | Compiles source code into executable code              |
+|          | `complex()`       | Creates a complex number                               |
+| D        | `delattr()`       | Deletes an attribute from an object                    |
+|          | `dict()`          | Creates a dictionary                                   |
+|          | `dir()`           | Returns list of attributes of an object                |
+|          | `divmod()`        | Returns quotient and remainder                         |
+| E        | `enumerate()`     | Adds index to iterable                                 |
+|          | `eval()`          | Executes expression as Python code                     |
+|          | `exec()`          | Executes Python code dynamically                       |
+| F        | `filter()`        | Filters elements based on condition                    |
+|          | `float()`         | Converts value to float                                |
+|          | `format()`        | Formats a value                                        |
+|          | `frozenset()`     | Creates immutable set                                  |
+| G        | `getattr()`       | Returns value of object attribute                      |
+|          | `globals()`       | Returns global symbol table                            |
+| H        | `hasattr()`       | Checks if object has attribute                         |
+|          | `hash()`          | Returns hash value of object                           |
+|          | `help()`          | Shows help documentation                               |
+|          | `hex()`           | Converts number to hexadecimal                         |
+| I        | `id()`            | Returns unique identity of object                      |
+|          | `input()`         | Takes input from user                                  |
+|          | `int()`           | Converts value to integer                              |
+|          | `isinstance()`    | Checks object type                                     |
+|          | `issubclass()`    | Checks class inheritance                               |
+|          | `iter()`          | Returns iterator object                                |
+| L        | `len()`           | Returns length of object                               |
+|          | `list()`          | Creates a list                                         |
+|          | `locals()`        | Returns local symbol table                             |
+| M        | `map()`           | Applies function to iterable                           |
+|          | `max()`           | Returns maximum value                                  |
+|          | `memoryview()`    | Access memory of object                                |
+|          | `min()`           | Returns minimum value                                  |
+| N        | `next()`          | Returns next item from iterator                        |
+| O        | `object()`        | Creates base object                                    |
+|          | `oct()`           | Converts number to octal                               |
+|          | `open()`          | Opens a file                                           |
+|          | `ord()`           | Converts character to ASCII value                      |
+| P        | `pow()`           | Returns power of a number                              |
+|          | `print()`         | Prints output                                          |
+|          | `property()`      | Defines property of class                              |
+| R        | `range()`         | Generates sequence of numbers                          |
+|          | `repr()`          | Returns string representation                          |
+|          | `reversed()`      | Returns reversed iterator                              |
+|          | `round()`         | Rounds a number                                        |
+| S        | `set()`           | Creates a set                                          |
+|          | `setattr()`       | Sets attribute value                                   |
+|          | `slice()`         | Returns slice object                                   |
+|          | `sorted()`        | Returns sorted list                                    |
+|          | `staticmethod()`  | Defines static method                                  |
+|          | `str()`           | Converts value to string                               |
+|          | `sum()`           | Returns sum of elements                                |
+|          | `super()`         | Access parent class                                    |
+| T        | `tuple()`         | Creates a tuple                                        |
+|          | `type()`          | Returns type of object                                 |
+| V        | `vars()`          | Returns object’s attributes                            |
+| Z        | `zip()`           | Combines iterables                                     |
+| _        | `__import__()`    | Imports a module dynamically                           |
+
+
+----------------------------------------------- Examples for each function ----------------------------------------------
+
+| Function         | 1-Line Example                       |
+| ---------------- | ------------------------------------ |
+| `abs()`          | `abs(-10)` → `10`                    |
+| `aiter()`        | `aiter(async_iterable)`              |
+| `all()`          | `all([True, True, False])` → `False` |
+| `anext()`        | `await anext(async_iterable)`        |
+| `any()`          | `any([0, 1, 0])` → `True`            |
+| `ascii()`        | `ascii("ñ")` → `"'\\xf1'"`           |
+| `bin()`          | `bin(5)` → `'0b101'`                 |
+| `bool()`         | `bool(0)` → `False`                  |
+| `breakpoint()`   | `breakpoint()`                       |
+| `bytearray()`    | `bytearray(b'abc')`                  |
+| `bytes()`        | `bytes("hi", "utf-8")`               |
+| `callable()`     | `callable(print)` → `True`           |
+| `chr()`          | `chr(65)` → `'A'`                    |
+| `classmethod()`  | `classmethod(method)`                |
+| `compile()`      | `compile("a=5", "", "exec")`         |
+| `complex()`      | `complex(2, 3)` → `(2+3j)`           |
+| `delattr()`      | `delattr(obj, "name")`               |
+| `dict()`         | `dict(a=1, b=2)`                     |
+| `dir()`          | `dir(str)`                           |
+| `divmod()`       | `divmod(10, 3)` → `(3, 1)`           |
+| `enumerate()`    | `list(enumerate(['a','b']))`         |
+| `eval()`         | `eval("2+3")` → `5`                  |
+| `exec()`         | `exec("x=5")`                        |
+| `filter()`       | `list(filter(lambda x:x>2,[1,2,3]))` |
+| `float()`        | `float("3.5")`                       |
+| `format()`       | `format(10, "b")` → `'1010'`         |
+| `frozenset()`    | `frozenset([1,2,3])`                 |
+| `getattr()`      | `getattr(obj, "name")`               |
+| `globals()`      | `globals()`                          |
+| `hasattr()`      | `hasattr(obj, "name")`               |
+| `hash()`         | `hash("abc")`                        |
+| `help()`         | `help(len)`                          |
+| `hex()`          | `hex(15)` → `'0xf'`                  |
+| `id()`           | `id(x)`                              |
+| `input()`        | `name = input()`                     |
+| `int()`          | `int("10")`                          |
+| `isinstance()`   | `isinstance(5, int)`                 |
+| `issubclass()`   | `issubclass(bool, int)`              |
+| `iter()`         | `iter([1,2,3])`                      |
+| `len()`          | `len([1,2,3])`                       |
+| `list()`         | `list("abc")`                        |
+| `locals()`       | `locals()`                           |
+| `map()`          | `list(map(lambda x:x*2,[1,2]))`      |
+| `max()`          | `max([3,7,2])`                       |
+| `memoryview()`   | `memoryview(b"abc")`                 |
+| `min()`          | `min([3,7,2])`                       |
+| `next()`         | `next(iter([1,2]))`                  |
+| `object()`       | `obj = object()`                     |
+| `oct()`          | `oct(8)` → `'0o10'`                  |
+| `open()`         | `open("file.txt","r")`               |
+| `ord()`          | `ord('A')` → `65`                    |
+| `pow()`          | `pow(2,3)` → `8`                     |
+| `print()`        | `print("Hello")`                     |
+| `property()`     | `x = property(get_x)`                |
+| `range()`        | `list(range(3))`                     |
+| `repr()`         | `repr("hi")`                         |
+| `reversed()`     | `list(reversed([1,2]))`              |
+| `round()`        | `round(3.6)`                         |
+| `set()`          | `set([1,2,2])`                       |
+| `setattr()`      | `setattr(obj,"age",20)`              |
+| `slice()`        | `slice(1,4)`                         |
+| `sorted()`       | `sorted([3,1,2])`                    |
+| `staticmethod()` | `staticmethod(func)`                 |
+| `str()`          | `str(123)`                           |
+| `sum()`          | `sum([1,2,3])`                       |
+| `super()`        | `super().__init__()`                 |
+| `tuple()`        | `tuple([1,2])`                       |
+| `type()`         | `type(10)`                           |
+| `vars()`         | `vars(obj)`                          |
+| `zip()`          | `list(zip([1,2],[3,4]))`             |
+| `__import__()`   | `__import__("math")`                 |

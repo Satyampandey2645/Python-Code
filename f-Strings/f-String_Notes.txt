@@ -1,0 +1,95 @@
+String Formatting in Python:
+    String formatting is used to insert variables or expressions into strings in a readable and controlled way.
+
+Python provides three main ways:
+1. format() method
+2. f-strings (recommended)
+3. % formatting (older, not recommended)
+
+1️⃣ format() Method
+    The format() method replaces placeholders {} with values.
+
+    Basic Example:
+        txt = "For only {} dollars!"
+        print(txt.format(49))
+
+    Output:
+        For only 49 dollars!
+
+    🔸 Formatting with Named Placeholders:
+        txt = "For only {price} dollars!"
+        print(txt.format(price=49))  
+
+    🔸 Formatting Decimal Precision:
+        txt = "For only {price:.2f} dollars!"
+        print(txt.format(price=49))
+
+    Output:
+        For only 49.00 dollars!
+
+        📌 .2f → shows 2 digits after decimal 
+
+2️⃣ f-Strings (Python 3.6+)
+    * Introduced by PEP 498
+    * Also called Literal String Interpolation
+    * Faster and more readable than format()
+    * Written by prefixing the string with f
+
+    Basic Example:
+        name = "Tushar"
+        age = 23
+        print(f"Hello, my name is {name} and I'm {age} years old.")
+
+    Output:
+        Hello, my name is Tushar and I'm 23 years old.
+
+    🔸 Using Expressions inside f-Strings:
+        print(f"Result: {2 * 30}")
+
+    Output:
+        Result: 60
+
+    🔸 Formatting Numbers with f-Strings:
+        price = 49
+        print(f"For only {price:.2f} dollars!")
+
+    Output:
+        For only 49.00 dollars!
+
+    🔸 Calling Functions inside f-Strings:
+        def square(x):
+            return x * x
+
+        print(f"Square is {square(5)}")
+
+❌ Common Mistake (Corrected)
+
+    ❌ Incorrect:
+        print("{val}for{val} is a portal for {val}.")
+
+    ✅ Correct:
+        val = "Geeks"
+        print(f"{val} for {val} is a portal for {val}.")
+
+🔥 Why f-Strings are Best (Interview Points)
+    ✅ More readable
+    ✅ Faster execution
+    ✅ Supports expressions & function calls
+    ✅ Cleaner syntax
+
+🧠 Interview One-Liners:
+    -> format() works in all Python versions
+    -> f-strings work in Python 3.6+
+    -> f-strings are evaluated at runtime
+    -> f-strings allow direct variable and expression embedding
+
+📌 Comparison (Quick View):
+
+| Feature            | format() | f-string |
+| ------------------ | -------- | -------- |
+| Readability        | Medium   | High     |
+| Speed              | Slower   | Faster   |
+| Python Version     | All      | 3.6+     |
+| Expression Support | Limited  | Full     |
+
+

@@ -1,0 +1,217 @@
+Python is dynamically typed language. Python is a high-level, interpreted, general-purpose programming language known for 
+its simplicity, readability, and versatility. It was created by Guido van Rossum and first released in 1991. Python is 
+widely used in web development, data science, AI/ML, automation, cloud, and backend development.
+In python, everything is treated as an object.
+
+🔹 Key Features of Python
+1. Simple & Easy to Learn
+   -> Python syntax is close to English
+   -> Less code compared to Java or C++
+        print("Hello, World!")
+
+2. Interpreted Language
+   -> Code is executed line by line
+   -> No compilation step → faster debugging
+
+3. Dynamically Typed
+   -> No need to declare data types explicitly
+        x = 10
+        x = "Hello"
+
+4. High-Level Language
+   -> Handles memory management automatically
+   -> Developer focuses on logic, not system-level details
+
+5. Platform Independent
+   -> Runs on Windows, Linux, macOS
+   -> Write once, run anywhere
+
+6. Large Standard Library
+   -> Built-in modules for:
+    * File handling
+    * Math
+    * Date & time
+    * Networking
+    * OS operations
+   import math
+   print(math.sqrt(16))
+
+7. Object-Oriented & Functional
+   -> Supports:
+    * Classes & Objects
+    * Functions
+    * Lambda expressions
+    * Decorators
+
+8. Extensive Third-Party Libraries
+   -> Web: Django, Flask, FastAPI
+   -> Data Science: NumPy, Pandas, Matplotlib
+   -> AI/ML: TensorFlow, PyTorch, Scikit-learn
+   -> Cloud & DevOps: Boto3, Docker SDK
+
+9. Automatic Memory Management
+   -> Uses Garbage Collection
+   -> No need to manually free memory
+
+10. Open Source & Large Community
+   -> Free to use
+   -> Huge developer community
+   -> Excellent documentation and support
+
+🔹 Where Python Is Used
+   -> 🌐 Web Development
+   -> 🤖 Artificial Intelligence & Machine Learning
+   -> 📊 Data Science & Analytics
+   -> ☁️ Cloud & DevOps (AWS, Azure)
+   -> 🔁 Automation & Scripting
+   -> 🎮 Game Development
+   -> 🧪 Scientific Computing
+
+🔹 Advantages of Python
+   -> ✅ Beginner-friendly
+   -> ✅ Faster development
+   -> ✅ Huge ecosystem
+   -> ✅ Strong community support
+
+🔹 Limitations
+
+   -> ❌ Slower than C/C++
+   -> ❌ Not ideal for mobile apps
+   -> ❌ High memory usage
+
+--------------------------------------------------------------------------------------------------------------------------
+
+🔹 What is PIP?
+   PIP (Pip Installs Packages) is Python’s package manager used to install, update, and remove external libraries.
+
+🔹 Common PIP Commands
+✅ Check PIP Version
+   pip --version
+
+📥 Install a Package
+   pip install numpy
+
+🔄 Upgrade a Package
+   pip install --upgrade numpy
+
+❌ Uninstall a Package
+   pip uninstall numpy
+
+📋 List Installed Packages
+   pip list
+
+📄 Install from requirements.txt
+   pip install -r requirements.txt
+
+
+🔹 Example: Using a Third-Party Module
+   pip install requests
+
+"  import requests
+
+   response = requests.get("https://api.github.com")
+   print(response.status_code)
+" 
+
+🔹 Virtual Environment (Important with PIP)
+   Used to manage project-specific dependencies.
+      python -m venv venv
+      venv\Scripts\activate   # Windows
+      source venv/bin/activate  # Linux/Mac   
+
+🔹 Difference Between Module & Package
+
+| Module             | Package               |
+| ------------------ | --------------------- |
+| Single `.py` file  | Collection of modules |
+| Simple             | More structured       |
+| Example: `math.py` | Example: `numpy`      |
+
+--------------------------------------------------------------------------------------------------------------------------
+
+REPL stands for:
+   Read → Eval → Print → Loop
+
+It is an interactive environment where Python:
+   1. Reads your input
+   2. Evaluates (executes) it
+   3. Prints the result
+   4. Loops back to wait for the next command   
+
+🔹 Python REPL Example
+   Open terminal / command prompt and type:
+      python
+
+   You’ll see:
+      >>>
+
+   Now try:
+      >>> 2 + 3
+      5
+      >>> x = 10
+      >>> x * 2
+      20
+
+This is the Python REPL.
+
+🔹 Why REPL is Useful
+   -> ✅ Quick testing of code
+   -> ✅ Learn Python interactively
+   -> ✅ Debug logic instantly
+   -> ✅ Experiment with libraries
+   -> ✅ No need to create a .py file
+
+🔹 How REPL Works (Flow)
+      User Input
+         ↓
+       Read
+         ↓
+      Evaluate
+         ↓
+    Print Output
+         ↓
+       Repeat
+
+🔹 Python REPL vs Script Mode
+
+| REPL                      | Script                    |
+| ------------------------- | ------------------------- |
+| Interactive               | File-based (`.py`)        |
+| Line-by-line execution    | Full program execution    |
+| Immediate output          | Output after running file |
+| Best for learning/testing | Best for production       |
+
+🔹 Popular Python REPLs
+   1️⃣ Default Python REPL
+         python
+
+   2️⃣ IPython (Advanced REPL)
+         pip install ipython
+         ipython
+   
+   Features:
+      * Auto-completion
+      * Syntax highlighting
+      * Magic commands
+
+   3️⃣ Jupyter Notebook
+      * Cell-based REPL
+      * Widely used in Data Science & ML
+
+🔹 Exit REPL
+      exit()
+OR
+      Ctrl + Z (Windows)
+      Ctrl + D (Linux/Mac)      
+
+🔹 Real-Life Use Case
+   You often use REPL to:
+   -> Test API responses (requests)
+   -> Check database queries
+   -> Verify Python logic quickly
+   -> Learn new libraries
+
+🔹 Summary
+* REPL = Interactive Python shell
+* Fast feedback loop
+* Best for learning, debugging & experimentation      

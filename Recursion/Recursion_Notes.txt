@@ -1,0 +1,85 @@
+🔁 Recursion in Python
+
+📌 What is Recursion?
+    Recursion is a programming technique where a function calls itself to solve a problem by breaking it into smaller 
+    sub-problems.
+
+🔍 Simple Definition (Exam-friendly):
+    Recursion is the process of solving a problem by defining it in terms of itself.
+
+🌍 Real-World Example:
+    Two parallel mirrors placed facing each other create infinite reflections — a classic example of recursion.
+
+🧠 Recursive Function in Python
+    A function that calls itself is known as a recursive function.
+
+    Every recursive function has two essential parts:
+    1. Base Case → Condition where recursion stops
+    2. Recursive Case → Function calls itself     
+
+🧩 Syntax of Recursive Function:
+
+        def function_name(parameters):
+            if base_condition:
+                return result
+            else:
+                return function_name(smaller_input)  
+
+✨ Example: Factorial Using Recursion
+
+        Factorial Formula
+        n! = n × (n−1)!
+        0! = 1   
+
+📁 Python Code:
+        def factorial(num):
+            if num == 0 or num == 1:   # Base case
+                return 1
+            else:
+                return num * factorial(num - 1)  # Recursive call
+
+        # Driver Code
+        num = 7
+        print("Number:", num)
+        print("Factorial:", factorial(num))
+
+    Output
+        Number: 7
+        Factorial: 5040      
+
+🔄 How Recursion Works (Factorial of 4)
+        factorial(4)
+        → 4 * factorial(3)
+        → 4 * 3 * factorial(2)
+        → 4 * 3 * 2 * factorial(1)
+        → 4 * 3 * 2 * 1
+        = 24                            
+
+⚠️ Important Points
+    * Base case is mandatory, otherwise infinite recursion occurs.
+    * Python limits recursion depth (default ≈ 1000 calls).
+    * Recursive solutions are often shorter and cleaner than loops.
+
+🧪 Common Recursive Problems (Interview)
+    * Factorial
+    * Fibonacci series
+    * Sum of digits
+    * Reverse a string
+    * Tree traversal (DFS)
+    * Binary search
+
+❌ Disadvantages of Recursion
+    * Slower than loops (due to function call overhead)
+    * Risk of stack overflow
+    * More memory usage
+
+✅ Recursion vs Loop:
+
+| Recursion                    | Loop                      |
+| ---------------------------- | ------------------------- |
+| Function calls itself        | Uses iteration            |
+| Cleaner for complex problems | Faster & memory efficient |
+| Uses call stack              | Uses single memory frame  |
+
+📝 One-Line Exam Answer:
+    A recursive function is a function that calls itself until a base condition is satisfied.

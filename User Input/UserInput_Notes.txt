@@ -1,0 +1,56 @@
+🔹 Input Function in Python
+   In Python, we can take user input directly using the built-in input() function.
+   The input() function always returns the input value as a string, even if the user enters a number.
+   
+   Hence, the returned value must be stored in a variable.
+
+🔹 Syntax
+    variable = input()
+
+🔹 Important Point
+   Since input() returns data in string format, we must typecast it to another data type when required.  
+
+🔹 Typecasting User Input
+
+🔸 Integer Input
+    num = int(input())
+
+🔸 Float Input
+    price = float(input())
+
+🔸 String Input (No Typecasting Needed)
+    name = input()
+
+🔹 Taking Input with a Message
+   We can also display a prompt message inside the input() function.
+   This makes the program more user-friendly.
+
+🔹 Example
+    name = input("Enter your name: ")
+    print("My name is", name)    
+
+🔹 Example: Adding Two Numbers
+    a = int(input("Enter first number: "))
+    b = int(input("Enter second number: "))
+
+    print("Sum =", a + b)
+
+🔹 Example Without Typecasting (Common Mistake)
+    a = input("Enter a number: ")
+    b = input("Enter another number: ")
+    print(a + b)
+
+
+    Output (for inputs 10 and 20):
+        1020
+    ❌ Because inputs are strings
+
+🔹 Correct Way
+    print(int(a) + int(b))
+
+
+🔹 Summary
+* input() is used to take user input
+* It always returns a string
+* Typecasting is required for numeric operations
+* Input prompts improve readability    

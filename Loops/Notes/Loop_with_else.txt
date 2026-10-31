@@ -1,0 +1,172 @@
+🔁 Python – else with Loop
+    In Python, else can be used with both for and while loops.
+
+    👉 The else block executes only if the loop finishes normally
+    👉 The else block does NOT execute if the loop is terminated using break
+
+🔹 else with for Loop:
+
+    Syntax:
+        for counter in sequence: 
+            #Statements inside for loop block 
+        else: 
+            #Statements inside else block
+
+    🔸 Example: else with for
+ 
+        for x in range(5): 
+            print("iteration no {} in for loop".format(x+1)) 
+        else: 
+            print("else block in loop") 
+        print ("Out of loop") 
+        
+    Output: 
+        iteration no 1 in for loop 
+        iteration no 2 in for loop 
+        iteration no 3 in for loop 
+        iteration no 4 in for loop 
+        iteration no 5 in for loop 
+        else block in loop 
+        Out of loop  
+
+🔹 else with while Loop:
+
+    Syntax:
+        while condition:
+            # loop body
+        else:
+            # executes when condition becomes False
+
+    🔸 Example: else with while
+
+        x = 1
+
+        while x <= 5:
+            print(x)
+            x += 1
+        else:
+            print("Loop completed successfully")
+
+        print("Out of loop")
+
+    Output:
+        1
+        2
+        3
+        4
+        5
+        Loop completed successfully
+        Out of loop
+
+    ✔ else executes because the loop ended normally (condition became False).
+
+    🔸 Example: else NOT executed due to break
+
+        x = 1
+
+        while x <= 5:
+            print(x)
+            if x == 3:
+                break
+            x += 1
+        else:
+            print("Loop completed")
+
+        print("Out of loop")
+
+    Output:
+        1
+        2
+        3
+        Out of loop
+
+    ❌ else did NOT execute because loop exited using break.
+
+🧠 IMPORTANT RULE (INTERVIEW POINT):
+    Loop else executes only when the loop completes without a break.
+
+🔍 Now Explanation of Programs:
+
+    🔸 Program 1: for loop
+
+        for i in range(6):
+            print(i)
+            if i == 4:
+                break
+        else: 
+            print("Sorry Sorry")
+
+    Output:
+        0
+        1
+        2
+        3
+        4
+
+    🔎 Explanation
+        * range(6) → values: 0 1 2 3 4 5
+        * Loop prints 0 to 4
+        * When i == 4, break executes
+        * Loop ends before finishing normally
+        * ❌ else block is skipped
+
+    ✔ That’s why "Sorry Sorry" is NOT printed
+
+    🔸 Program 2: while loop
+
+        i = 0
+        while(i < 7):
+            print(i)
+            i = i + 1
+            if i == 4:
+                break
+        else:
+            print("sorry sorry")
+
+    Output:
+        0
+        1
+        2
+        3
+
+🔍 WHY does while print only 0–3?
+    Step-by-Step Execution:
+
+| Iteration | i before print | Printed | i after increment | break check |
+| --------- | -------------- | ------- | ----------------- | ----------- |
+| 1         | 0              | 0       | 1                 | No          |
+| 2         | 1              | 1       | 2                 | No          |
+| 3         | 2              | 2       | 3                 | No          |
+| 4         | 3              | 3       | 4                 | ✅ break    |
+
+🚨 Break happens when i == 4 AFTER increment, so 4 is never printed
+
+❌ Loop ends via break
+❌ else block is skipped
+
+🔑 KEY DIFFERENCE (Very Important):
+
+    🔸 for loop:
+
+        if i == 4:
+            break
+
+    ✔ Break happens after printing 4
+
+    🔸 while loop
+
+        i = i + 1
+        if i == 4:
+            break
+
+    ✔ Break happens before printing 4
+
+🧠 One-Line Interview Answer:
+    In Python, the else block of a loop executes only if the loop completes normally without encountering a break.
+
+📌 Summary Table:
+
+| Loop Type | Printed Values | Else Executed? | Reason                 |
+| --------- | -------------- | -------------- | ---------------------- |
+| `for`     | 0–4            | ❌ No           | break at `i==4`       |
+| `while`   | 0–3            | ❌ No           | break after increment |

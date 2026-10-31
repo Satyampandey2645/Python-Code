@@ -1,0 +1,206 @@
+🔁 Introduction to Loops in Python
+    Sometimes a programmer wants to execute a block of code multiple times.
+    This can be achieved using loops.
+
+🔹 Types of Loops in Python
+    Python mainly supports two types of loops:
+    1. for loop
+    2. while loop    
+
+🔁 The for Loop
+    A for loop is used to iterate over a sequence (iterable objects).
+    Iterable objects include:
+    * Strings
+    * Lists
+    * Tuples
+    * Sets
+    * Dictionaries    
+
+🔸 Example: Iterating over a String
+        name = "Abhishek"
+
+        for i in name:
+            print(i, end=", ")
+
+   Output:
+        A, b, h, i, s, h, e, k,
+
+🔸 Example: Iterating over a List
+        colors = ["Red", "Green", "Blue", "Yellow"]
+
+        for x in colors:
+            print(x)
+
+   Output:
+        Red
+        Green
+        Blue
+        Yellow 
+
+✔ Similarly, for loops can be used with tuples, sets, and dictionaries.        
+
+🔹 The range() Function
+    Sometimes, we do not want to loop over a sequence, but want to run a loop a specific number of times.
+    For this, Python provides the range() function.
+
+🔸 Example: range(n)
+        for k in range(5):
+            print(k)
+
+   Output:
+        0
+        1
+        2
+        3
+        4
+
+📌 By default:
+    * Starts from 0
+    * Ends at n-1
+    * Step value is 1
+
+🔸 Example: range(start, end)
+        for k in range(4, 9):
+            print(k)
+
+   Output:
+        4
+        5
+        6
+        7
+        8
+
+👉 Third Parameter of range() → Step Value
+    Syntax:
+        range(start, end, step)
+
+    * start → starting value (inclusive)
+    * end → ending value (exclusive)
+    * step → increment/decrement value
+
+🔸 Example: Using Step Value
+        for i in range(1, 10, 2):
+            print(i)
+
+   Output:
+        1
+        3
+        5
+        7
+        9
+
+   ✔ Increases by 2 each time
+
+🔸 Example: Reverse Loop
+        for i in range(10, 0, -2):
+            print(i)
+
+   Output:
+        10
+        8
+        6
+        4
+        2
+
+   ✔ Decreases by 2 each time
+
+📝 Summary:
+    * Loops are used to repeat code
+    * Python has for and while loops
+    * for loop works with iterable objects
+    * range() helps loop a fixed number of times
+    * range(start, end, step) allows control over iteration
+
+-------------------------------------------------------------------------------------------------------------------------
+
+🔁 Python while Loop
+    A while loop is used to execute a block of code repeatedly as long as a given condition is True.
+    When the condition becomes False, the loop stops and control moves outside the loop.
+
+🔹 Syntax:
+        while condition:
+            statements
+
+🔸 Example: Basic while Loop
+        count = 5
+
+        while count > 0:
+            print(count)
+            count = count - 1
+
+   Output:
+        5
+        4
+        3
+        2
+        1
+
+🧠 Explanation
+    * count starts at 5
+    * The loop runs while count > 0
+    * After every iteration, count is decremented
+    * When count becomes 0, condition becomes False
+    * Loop terminates
+
+   ⚠️ If we forget to update the counter, the loop will run infinitely
+
+🔹 Infinite Loop Example (Avoid This!)
+    x = 5
+    while x > 0:
+        print(x)
+
+    ❌ This runs forever because x never changes
+
+🔁 else with while Loop
+    Python allows an else block with a while loop.
+
+    ✔ The else block executes:
+        * Only when the loop condition becomes False
+        * Not executed if loop is stopped using break
+
+🔸 Example: while with else
+        x = 5
+
+        while x > 0:
+            print(x)
+            x = x - 1
+        else:
+            print("counter is 0")
+
+   Output:
+        5
+        4
+        3
+        2
+        1
+        counter is 0
+
+🧠 Explanation
+    * Loop runs while x > 0
+    * When x becomes 0, condition becomes False
+    * Loop ends
+    * else block is executed
+
+🔸 Example: else NOT executed (using break)
+        x = 5
+
+        while x > 0:
+            if x == 3:
+                break
+            print(x)
+            x -= 1
+        else:
+            print("counter is 0")
+
+   Output:
+        5
+        4
+
+   ✔ else is skipped because break was used
+
+📝 Summary:
+    * while loop runs while condition is True
+    * Loop stops when condition becomes False
+    * Counter variable must be updated to avoid infinite loop
+    * else block executes after normal loop completion
+    * else does not execute if loop ends using break

@@ -1,0 +1,131 @@
+🔹 Exception Handling in Python
+
+   What is Exception Handling?
+    Exception handling is a mechanism used to handle runtime errors so that the normal flow of a program is not 
+    interrupted. If exceptions are not handled, the program terminates abruptly (crashes).
+
+🔹 Exceptions in Python:
+    Python has many built-in exceptions such as:
+    * ValueError
+    * TypeError
+    * ZeroDivisionError
+    * IndexError
+    * KeyError
+
+    When an exception occurs:
+    * Python stops the current execution
+    * Looks for an exception handler
+    * If not found → program crashes   
+
+🔹 try…except Block
+    The try block contains risky code that may raise an exception.
+    The except block contains code to handle the exception.
+
+    Syntax:
+        try:
+            # Code that may raise an exception
+        except ExceptionType:
+            # Code to handle the exception
+
+    Example:
+        try:
+            num = int(input("Enter an integer: "))
+        except ValueError:
+            print("Number entered is not an integer.")
+
+    Output:
+        Enter an integer: 6.022
+        Number entered is not an integer.
+
+    📌 Explanation:
+        * int() fails for decimal input
+        * ValueError is raised
+        * except block handles it safely 
+
+🔹 Multiple except Blocks
+    We can handle different exceptions separately.
+
+        try:
+            a = int(input("Enter a number: "))
+            print(10 / a)
+        except ValueError:
+            print("Invalid input")
+        except ZeroDivisionError:
+            print("Cannot divide by zero")
+
+🔹 try…except…else
+    The else block executes only when no exception occurs.
+
+    Syntax:
+        try:
+            # Risky code
+        except:
+            # Runs if exception occurs
+        else:
+            # Runs if no exception occurs
+
+    Example:
+        try:
+            x = int(input("Enter number: "))
+        except ValueError:
+            print("Invalid input")
+        else:
+            print("You entered:", x)  
+
+🔹 finally Block
+    The finally block always executes, whether:
+    * Exception occurs or not
+    * Value is returned or not
+
+    Used for:
+    * Closing files
+    * Closing database connections
+    * Cleanup tasks                  
+
+    Syntax:
+        try:
+            # Risky code
+        except:
+            # Handle exception
+        finally:
+            # Always executed    
+
+    Example:
+        try:
+            f = open("test.txt", "r")
+            print(f.read())
+        except FileNotFoundError:
+            print("File not found")
+        finally:
+            print("Program execution completed")
+
+    📌 Explanation:
+        * File may or may not exist
+        * finally block runs in all cases       
+
+🔹 finally with return (Important Interview Question ⭐):
+    Even if a function returns a value, finally still executes.
+
+    Example:
+        def fun():
+            try:
+                return 10
+            finally:
+                print("Inside finally")
+
+        print(fun())
+
+    Output:
+        Inside finally
+        10
+
+    📌 Key Point:
+        * finally executes before the value is returned
+
+🔹 Key Interview Points (Must Remember):
+    * try → risky code
+    * except → handles exception
+    * else → runs if no exception
+    * finally → always runs
+    * Unhandled exception → program crash
+    * finally runs even with return             

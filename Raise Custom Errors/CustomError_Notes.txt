@@ -1,0 +1,97 @@
+🔹 Raising Custom Errors in Python
+
+   What are Custom Errors?
+    Custom errors (or custom exceptions) are user-defined exceptions that we create to handle specific situations in our 
+    program where built-in exceptions are not enough.
+
+    Python allows us to raise errors manually using the raise keyword.
+
+🔹 Raising an Exception Using raise
+    The raise keyword is used to forcefully trigger an exception.
+
+    Example: Raising a Built-in Exception
+
+        salary = int(input("Enter salary amount: "))
+
+        if not 2000 < salary < 5000:
+            raise ValueError("Not a valid salary")
+
+    📌 Explanation:
+        * If salary is outside the range 2000–5000
+        * A ValueError is raised manually
+        * Program stops unless the error is handled
+
+    📌 Used when input is logically incorrect, even if syntax is valid   
+
+🔹 Why Do We Need Custom Exceptions?
+    Built-in exceptions may not clearly explain application-specific errors.
+
+    Custom exceptions help:
+    * Make code more readable
+    * Handle specific business rules
+    * Perform actions like:
+        -> Logging
+        -> Sending error reports
+        -> Calling APIs
+        -> Showing user-friendly messages  
+
+🔹 Defining a Custom Exception
+    In Python, custom exceptions are created by inheriting from the Exception class.
+
+    Syntax:
+        class CustomError(Exception):
+            pass
+
+    * Exception is the base class for all exceptions
+    * pass is used when no extra functionality is needed    
+
+🔹 Using Custom Exception with try…except
+
+    Example:
+
+        class InvalidSalaryError(Exception):
+            pass
+
+        try:
+            salary = int(input("Enter salary amount: "))
+            if not 2000 < salary < 5000:
+                raise InvalidSalaryError("Salary must be between 2000 and 5000")
+        except InvalidSalaryError as e:
+            print(e)
+
+    Output:
+        Enter salary amount: 6000
+        Salary must be between 2000 and 5000  
+
+🔹 Custom Exception with Extra Logic
+
+        class AgeNotValidError(Exception):
+            def __init__(self, age):
+                self.age = age
+
+            def __str__(self):
+                return f"Age {self.age} is not valid"
+
+        try:
+            age = int(input("Enter age: "))
+            if age < 18:
+                raise AgeNotValidError(age)
+        except AgeNotValidError as e:
+            print(e)
+
+🔹 When Should You Use Custom Exceptions?
+    Use custom exceptions when:
+    * Business logic fails
+    * Validation rules are broken
+    * Specific error handling is required
+    * You want clear and meaningful error messages
+
+🔹 Interview Key Points ⭐
+    * raise keyword is used to trigger exceptions manually
+    * Custom exceptions inherit from Exception
+    * Improve code clarity and maintainability
+    * Useful for application-specific errors
+
+📝 One-Line Interview Answer 💡
+    Custom exceptions are user-defined errors created by extending the Exception class to handle application-specific 
+    error conditions.                 

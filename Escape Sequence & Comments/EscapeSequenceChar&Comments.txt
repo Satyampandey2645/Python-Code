@@ -1,0 +1,141 @@
+🔹 What is an Escape Sequence?
+   An escape sequence is a special combination of characters that starts with a backslash (\) and is used to represent 
+   characters that are difficult or impossible to type directly in a string.
+   To insert characters that cannot be directly used in a string, we use an escape sequence character.
+   An escape sequence character is a backslash (\) followed by the character you want to insert.
+
+🔹 Common Escape Sequences in Python
+
+| Escape Sequence | Meaning         | Example               |
+| --------------- | --------------- | --------------------- |
+| `\n`            | New line        | `"Hello\nWorld"`      |
+| `\t`            | Horizontal tab  | `"A\tB"`              |
+| `\\`            | Backslash       | `"C:\\Users"`         |
+| `\'`            | Single quote    | `'It\'s Python'`      |
+| `\"`            | Double quote    | `"He said \"Hello\""` |
+| `\r`            | Carriage return | `"Hello\rWorld"`      |
+| `\b`            | Backspace       | `"Hello\bWorld"`      |
+| `\f`            | Form feed       | `"Hello\fWorld"`      |
+| `\v`            | Vertical tab    | `"Hello\vWorld"`      |
+| `\0`            | Null character  | `"\0"`                |
+
+🔹 Examples
+   🔸 New Line (\n)
+        print("Hello\nPython")
+
+        Output:
+           Hello
+           Python
+
+   🔸 Tab Space (\t)
+        print("Name\tAge")
+        print("Satyam\t21")
+
+   🔸 Quotes Inside String
+        print("It's Python")
+        print("It\'s Python")
+
+   🔸 Backslash
+        print("C:\\Users\\Dell")
+
+🔹 Raw Strings (r"")
+   Raw strings ignore escape sequences.
+        print(r"C:\Users\Dell\new")
+
+   ✔ Best for:
+      * File paths
+      * Regular expressions
+
+🔹 ASCII Escape Sequences
+
+| Escape       | Description      |
+| ------------ | ---------------- |
+| `\xhh`       | Hex value        |
+| `\ooo`       | Octal value      |
+| `\uXXXX`     | Unicode (16-bit) |
+| `\UXXXXXXXX` | Unicode (32-bit) |
+
+Example:
+    print("\u2764")  # ❤
+
+🔹 Why Escape Sequences Are Important
+   -> ✅ Formatting output
+   -> ✅ Handling special characters
+   -> ✅ Writing file paths
+   -> ✅ Writing clean strings
+
+🔹 Summary
+   * Escape sequences start with \
+   * Used to represent special characters
+   * Raw strings disable escape sequences
+   * Very important in strings & printing
+
+-------------------------------------------------------------------------------------------------------------------------
+
+🔹 What are Comments?
+   Comments are lines in a program that are not executed by Python.
+   They are used to explain code, make it readable, and help with documentation.
+
+🔹 Types of Comments in Python
+
+1️⃣ Single-Line Comment (#)
+   Used to write short explanations.
+      # This is a single-line comment
+      x = 10  # Assigning value to x
+
+2️⃣ Multi-Line Comments (Using #)
+   Python does not have a dedicated multi-line comment symbol.
+   We use multiple #.
+      # This program adds two numbers
+      # Input is taken from the user
+      # Output is printed on the screen
+
+      a = 5
+      b = 10
+      print(a + b)
+
+3️⃣ Docstrings (""" """ or ''' ''')
+   Used for documentation, not just comments.
+      def add(a, b):
+          """
+          This function returns the sum of two numbers.
+          """
+          return a + b
+
+✔ Access docstring:
+      print(add.__doc__)   
+
+🔹 Comments vs Docstrings
+
+| Comments             | Docstrings          |
+| -------------------- | ------------------- |
+| Start with `#`       | Use triple quotes   |
+| Not stored in memory | Stored as `__doc__` |
+| For developers       | For documentation   |
+
+🔹 Why Comments Are Important
+   -> ✅ Improve readability
+   -> ✅ Help others understand code
+   -> ✅ Easy debugging
+   -> ✅ Better maintenance
+   -> ✅ Good practice for interviews & real projects
+
+🔹 Best Practices
+   -> ✔ Keep comments clear and meaningful
+   -> ✔ Avoid obvious comments
+   -> ❌ Don’t over-comment
+
+Bad:
+   x = 10  # assigning 10 to x
+Good:
+   # Maximum login attempts allowed
+   MAX_LOGIN = 10
+
+🔹 Commenting Shortcut (IDE)
+   -> VS Code: Ctrl + /
+   -> PyCharm: Ctrl + /
+
+🔹 Summary
+   # → Single-line comment
+   Multiple # → Multi-line comments
+   """ """ → Docstrings (documentation)   

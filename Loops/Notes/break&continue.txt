@@ -1,0 +1,80 @@
+🔹 Break and Continue Statements in Python
+    Sometimes, when working with loops, we may want to control the flow of iteration.
+    Python provides break and continue statements for this purpose.
+
+1️⃣ The break Statement
+    * Terminates the current loop immediately
+    * Control moves to the first statement after the loop
+    * Can be used in for and while loops
+
+🔸 Syntax:
+        for item in iterable:
+            if condition:
+                break
+            # other statements    
+
+🔹 Example: Using break
+        for i in range(1, 101):
+            print(i, end=" ")
+
+            if i == 50:
+                break
+            else:
+                print("Mississippi")
+        print("Thank you")
+
+   Output:
+        1 Mississippi
+        2 Mississippi
+        3 Mississippi
+        ...
+        50 Mississippi
+        Thank you
+
+
+📌 Explanation:
+    * The loop stops when i == 50
+    * Remaining numbers after 50 are not printed
+    * Program continues after the loop            
+
+2️⃣ The continue Statement
+    * Skips the rest of the loop body for the current iteration
+    * Moves to the next iteration immediately
+    * Can be used in for and while loops
+
+🔸 Syntax:
+        for item in iterable:
+            if condition:
+                continue
+            # other statements
+
+🔹 Example: Using continue
+        for i in [2, 3, 4, 6, 8, 0]:
+            if i % 2 != 0:
+                continue
+            print(i)
+
+   Output:
+        2
+        4
+        6
+        8
+        0
+
+📌 Explanation:
+    * Skips odd numbers (i % 2 != 0)
+    * Prints only even numbers    
+
+3️⃣ Difference Between break and continue
+
+| Feature    | break                         | continue                                |
+| ---------- | ----------------------------- | --------------------------------------- |
+| Effect     | Stops the loop entirely       | Skips current iteration only            |
+| Usage      | Exits loop when condition met | Skip current iteration if condition met |
+| Applies to | for, while                    | for, while                              |
+| Flow       | Moves outside loop            | Moves to next iteration                 |
+
+🔹 Notes:
+    * break is useful for stopping infinite loops
+    * continue is useful for skipping unwanted cases
+    * Both can improve loop efficiency

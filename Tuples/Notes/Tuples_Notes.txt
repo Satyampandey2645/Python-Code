@@ -1,0 +1,150 @@
+🟣 Python Tuples
+    Tuples are ordered collections of data items.
+    They store multiple items in a single variable.
+    Tuple items are separated by commas and enclosed within round brackets ().
+    Tuples are unchangeable (immutable), meaning we cannot modify them after creation.
+
+🔹 Creating Tuples
+    Example 1:
+        tuple1 = (1, 2, 2, 3, 5, 4, 6)
+        tuple2 = ("Red", "Green", "Blue")
+
+        print(tuple1)
+        print(tuple2)
+
+    Output:
+        (1, 2, 2, 3, 5, 4, 6)
+        ('Red', 'Green', 'Blue')   
+
+    Example 2: Tuple with mixed data types
+        details = ("Abhijeet", 18, "FYBScIT", 9.8)
+        print(details)
+
+    Output:
+        ('Abhijeet', 18, 'FYBScIT', 9.8)  
+
+🔹 Tuple Indexes
+    Each element in a tuple has a unique index starting from 0.
+
+    Example:  
+        country = ("Spain", "Italy", "India")
+        #             0         1        2
+
+🔹 Accessing Tuple Items
+
+I. Positive Indexing
+        country = ("Spain", "Italy", "India")
+
+        print(country[0])
+        print(country[1])
+        print(country[2])
+
+    Output:
+        Spain
+        Italy
+        India  
+
+II. Negative Indexing
+    Negative indexing accesses elements from the end of the tuple.
+
+        country = ("Spain", "Italy", "India", "England", "Germany")
+
+        print(country[-1])   # Last element
+        print(country[-3])
+        print(country[-4])
+
+    Output:
+        Germany
+        India
+        Italy      
+
+🔹 Check if an Item Exists in a Tuple
+    We use the in keyword.
+
+    Example 1:
+        country = ("Spain", "Italy", "India", "England", "Germany")
+
+        if "Germany" in country:
+            print("Germany is present.")
+        else:
+            print("Germany is absent.")  
+
+    Output:
+        Germany is present.
+
+    Example 2:
+        country = ("Spain", "Italy", "India", "England", "Germany")
+
+        if "Russia" in country:
+            print("Russia is present.")
+        else:
+            print("Russia is absent.")
+
+    Output:
+        Russia is absent.     
+
+🔹 Range of Index (Tuple Slicing)
+    Syntax:
+        tuple[start : end : jumpIndex]
+
+    🔸 jumpIndex is optional
+    🔸 end index is not included
+
+    Jump Index:
+    * Jump Index is used to skip elements while slicing a sequence.
+    * It is the third parameter in slicing: start : end : jumpIndex
+    * It decides how many steps to move forward after each element.
+    * A jump index of 2 prints alternate elements.
+    * A jump index of 3 prints every third element.
+    * If jump index is not given, it is 1 by default.
+    * Jump index works with lists, tuples, and strings.
+
+    Example 1: Printing elements within a range
+        animals = ("cat", "dog", "bat", "mouse", "pig", "horse", "donkey", "goat", "cow")
+
+        print(animals[3:7])      # Positive indexing
+        print(animals[-7:-2])   # Negative indexing
+
+    Output:
+        ('mouse', 'pig', 'horse', 'donkey')
+        ('bat', 'mouse', 'pig', 'horse', 'donkey')
+
+    Example 2: Printing elements from a given index till the end
+        print(animals[4:])
+        print(animals[-4:])
+
+    Output:
+        ('pig', 'horse', 'donkey', 'goat', 'cow')
+        ('horse', 'donkey', 'goat', 'cow')
+
+    Example 3: Printing elements from start till a given index
+        print(animals[:6])
+        print(animals[:-3])
+
+    Output:
+        ('cat', 'dog', 'bat', 'mouse', 'pig', 'horse')
+        ('cat', 'dog', 'bat', 'mouse', 'pig', 'horse')
+
+    Example 4: Printing alternate elements
+        print(animals[::2])
+        print(animals[-8:-1:2])
+
+    Output:
+        ('cat', 'bat', 'pig', 'donkey', 'cow')
+        ('dog', 'mouse', 'horse', 'goat')
+
+    Example 5: Printing every 3rd element within a range
+        animals = ("cat", "dog", "bat", "mouse", "pig", "horse", "donkey", "goat", "cow")
+        print(animals[1:8:3])
+
+    Output:
+        ('dog', 'pig', 'goat')
+
+🔹 Important Points to Remember
+    ✔ Tuples are immutable
+    ✔ Faster than lists
+    ✔ Can contain duplicate values
+    ✔ Allow mixed data types
+    ✔ Support indexing & slicing           
+
+             

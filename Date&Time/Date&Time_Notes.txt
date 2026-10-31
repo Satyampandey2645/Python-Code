@@ -1,0 +1,159 @@
+🕒 Date & Time in Python (Beginner Guide)
+    Python provides built-in modules to work with date and time.
+    The most commonly used module is:
+        time
+
+    Another very important and powerful module is:
+        datetime
+
+1️⃣ time Module in Python
+    The time module helps us work with time-related functions, such as:
+    * Current time
+    * Formatting time
+    * Delays (sleep)
+
+    📌 Importing the time module
+        import time
+
+2️⃣ Getting Current Time using strftime()
+    strftime() → string format time
+    It converts time into readable string format.
+
+    Example:
+        import time
+
+        timestamp = time.strftime('%H:%M:%S')
+        print(timestamp)
+
+    Output:
+        14:35:20
+
+⏱️ Format Codes in strftime()
+
+| Code | Meaning               | Example  |
+| ---- | --------------------- | -------- |
+| `%H` | Hour (24-hour format) | 14       |
+| `%I` | Hour (12-hour format) | 02       |
+| `%M` | Minutes               | 35       |
+| `%S` | Seconds               | 20       |
+| `%p` | AM / PM               | PM       |
+| `%d` | Day of month          | 26       |
+| `%m` | Month number          | 12       |
+| `%Y` | Year (full)           | 2025     |
+| `%y` | Year (short)          | 25       |
+| `%A` | Weekday name          | Thursday |
+| `%B` | Month name            | December |
+
+3️⃣ Your Code Explained Line by Line
+
+    ✅ Full Time
+        timestamp = time.strftime('%H:%M:%S')
+        print(timestamp)
+    👉 Prints current hour, minute, and second
+
+    ✅ Only Hour
+        timestamp = time.strftime('%H')
+        print(timestamp)
+    👉 Prints current hour
+
+    ✅ Only Minutes
+        timestamp = time.strftime('%M')
+        print(timestamp)
+    👉 Prints current minutes
+
+    ✅ Only Seconds
+        timestamp = time.strftime('%S')
+        print(timestamp)
+    👉 Prints current seconds
+
+4️⃣ Using Time for Greetings (Real-Life Example)
+        import time
+
+        hour = int(time.strftime('%H'))
+
+        if hour < 12:
+            print("Good Morning")
+        elif hour < 17:
+            print("Good Afternoon")
+        else:
+            print("Good Evening")
+
+5️⃣ time.sleep() → Pause Execution
+    Used to delay the program execution
+
+    Example:
+        import time
+
+        print("Wait for 3 seconds...")
+        time.sleep(3)
+        print("Done!")
+
+6️⃣ datetime Module (More Powerful)
+    The datetime module is used when we need:
+    * Date + Time together
+    * Date calculations
+    * Better formatting
+
+    📌 Import datetime
+            from datetime import datetime
+
+7️⃣ Get Current Date & Time
+        now = datetime.now()
+        print(now)
+
+    Output:
+        2025-12-26 14:40:10.123456
+
+8️⃣ Extract Date & Time Separately
+        from datetime import datetime
+
+        now = datetime.now()
+
+        print("Date:", now.date())
+        print("Time:", now.time())
+
+9️⃣ Formatting Date & Time using strftime()
+        from datetime import datetime
+
+        now = datetime.now()
+        formatted = now.strftime("%d-%m-%Y %H:%M:%S")
+        print(formatted)
+
+    Output:
+        26-12-2025 14:40:10
+
+🔟 Creating a Specific Date
+        from datetime import date
+
+        d = date(2025, 12, 26)
+        print(d)
+
+1️⃣1️⃣ Date Difference (Days Calculation)
+        from datetime import date
+
+        d1 = date(2025, 1, 1)
+        d2 = date(2025, 12, 26)
+
+        print(d2 - d1)
+
+    Output:
+        359 days
+
+🔑 Difference Between time & datetime
+
+| Feature           | time | datetime |
+| ----------------- | ---- | -------- |
+| Current Time      | ✅   | ✅      |
+| Date Support      | ❌   | ✅      |
+| Calculations      | ❌   | ✅      |
+| Formatting        | ✅   | ✅      |
+| Beginner Friendly | ✅   | ✅      |
+
+
+✅ Summary (Exam-Ready)
+    -> time.strftime() → format time
+    -> %H %M %S → hour, minute, second
+    -> time.sleep() → pause execution
+    -> datetime.now() → current date & time
+    -> strftime() works in both modules
+    -> datetime is more powerful than time

@@ -1,0 +1,151 @@
+🔹 Python Lists:
+
+What is a List?
+A list is a collection used to store multiple values in a single variable.
+
+Key Features of Lists:
+ * Ordered (items have fixed positions)
+ * Allows duplicate values
+ * Can store different data types
+ * Mutable → you can change values after creation
+
+🔹 Creating a List
+        lst1 = [1, 2, 2, 3, 5, 4, 6]
+        lst2 = ["Red", "Green", "Blue"]
+
+        print(lst1)
+        print(lst2)
+
+    Output:
+        [1, 2, 2, 3, 5, 4, 6]
+        ['Red', 'Green', 'Blue']
+
+🔹 List with Mixed Data Types
+        details = ["Abhijeet", 18, "FYBScIT", 9.8]
+        print(details)
+
+    Output:
+        ['Abhijeet', 18, 'FYBScIT', 9.8]
+
+    ✔ A list can store strings, integers, floats, etc. together   
+
+🔹 List Indexing
+    Each item has an index number (position).
+
+        colors = ["Red", "Green", "Blue", "Yellow", "Green"]
+                   0        1        2        3         4        
+
+🔹 Accessing List Items
+    Positive Indexing:
+    Starts from 0 (left to right)
+        print(colors[0])  # Red
+        print(colors[2])  # Blue
+        print(colors[4])  # Green   
+
+    Negative Indexing:
+    Starts from -1 (right to left)
+
+        colors = ["Red", "Green", "Blue", "Yellow", "Green"]
+                   -5      -4        -3        -2        -1
+
+        print(colors[-1])  # Green
+        print(colors[-3])  # Blue
+        print(colors[-5])  # Red                       
+
+🔹 Check if Item Exists in List (in keyword)
+        colors = ["Red", "Green", "Blue", "Yellow", "Green"]
+
+        if "Yellow" in colors:
+            print("Yellow is present")
+        else:
+            print("Yellow is absent")
+
+    Output:
+        Yellow is present
+
+🔹 List Slicing (Range of Index)
+    Syntax: 
+        list[start : end : step]
+
+    * start → where slicing begins
+    * end → stops before this index
+    * step → jump/skip count (optional) 
+
+    Jump Index:
+    * Jump Index is used to skip elements while slicing a sequence.
+    * It is the third parameter in slicing: start : end : jumpIndex
+    * It decides how many steps to move forward after each element.
+    * A jump index of 2 prints alternate elements.
+    * A jump index of 3 prints every third element.
+    * If jump index is not given, it is 1 by default.
+    * Jump index works with lists, tuples, and strings.
+
+    Example: Range of Elements
+        animals = ["cat","dog","bat","mouse","pig","horse","donkey","goat","cow"]
+
+        print(animals[3:7])
+        print(animals[-7:-2])
+
+    Output:
+        ['mouse', 'pig', 'horse', 'donkey']
+        ['bat', 'mouse', 'pig', 'horse', 'donkey'] 
+
+    From Index to End
+        print(animals[4:])
+        print(animals[-4:])
+
+    Output:
+        ['pig', 'horse', 'donkey', 'goat', 'cow']
+        ['horse', 'donkey', 'goat', 'cow']   
+
+    From Start to Given Index
+        print(animals[:6])
+        print(animals[:-3])
+
+    Output:
+        ['cat', 'dog', 'bat', 'mouse', 'pig', 'horse']
+        ['cat', 'dog', 'bat', 'mouse', 'pig', 'horse']     
+
+    Printing Alternate Elements
+        print(animals[::2])
+
+    Output:
+        ['cat', 'bat', 'pig', 'donkey', 'cow']
+
+    Every 3rd Element in Range
+        print(animals[1:8:3])
+
+    Output:
+        ['dog', 'pig', 'goat']
+
+🔹 List Comprehension
+    Used to create a new list from an existing iterable in a single line.
+
+    Syntax:
+        new_list = [expression for item in iterable if condition]  
+
+    Example 1: Names containing "o"
+        names = ["Milo", "Sarah", "Bruno", "Anastasia", "Rosa"]
+
+        names_with_o = [item for item in names if "o" in item]
+        print(names_with_o)
+
+    Output:
+        ['Milo', 'Bruno', 'Rosa']   
+
+    Example 2: Names with more than 4 letters
+        names = ["Milo", "Sarah", "Bruno", "Anastasia", "Rosa"]
+
+        long_names = [item for item in names if len(item) > 4]
+        print(long_names)
+
+    Output:
+        ['Sarah', 'Bruno', 'Anastasia']  
+
+🔹 Summary:
+    * Lists store multiple values
+    * Lists are ordered & mutable
+    * Indexing can be positive or negative
+    * Slicing helps extract ranges
+    * in keyword checks membership
+    * List comprehension creates lists efficiently                     

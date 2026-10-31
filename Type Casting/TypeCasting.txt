@@ -1,0 +1,109 @@
+🔹 Typecasting in python:
+   The conversion of one data type into another data type is known as type casting or type conversion in Python.
+
+   Python provides many built-in functions for type conversion such as:
+   int(), float(), str(), bool(), list(), tuple(), set(), dict(), ord(), hex(), oct(), etc.
+
+Two Types of Typecasting:
+1️⃣ Explicit Type Conversion (Explicit type casting in python)
+2️⃣ Implicit Type Conversion (Implicit type casting in python)
+
+🔹 Explicit Typecasting (Explicit Type Conversion):
+The conversion of one data type into another manually by the programmer according to the program’s requirement is called 
+explicit typecasting.
+
+This is done using Python’s built-in type conversion functions such as:
+int(), float(), str(), hex(), oct(), list(), etc.
+
+🔹 Examples of Explicit Typecasting:
+
+🔸 Integer to Float
+    a = 10
+    b = float(a)
+    print(b)
+    print(type(b))
+
+    Output:
+        10.0
+        <class 'float'>
+
+🔸 Float to Integer
+    x = 12.8
+    y = int(x)
+    print(y)
+
+    Output:
+        12
+
+🔸 String to Integer
+    s = "100"
+    n = int(s)
+    print(n)
+
+    Output:
+        100
+
+🔸 Integer to String
+    num = 50
+    s = str(num)
+    print(s)
+    print(type(s))
+
+🔸 List to Tuple
+    lst = [1, 2, 3]
+    t = tuple(lst)
+    print(t)
+
+🔸 String to List
+    s = "python"
+    lst = list(s)
+    print(lst)
+
+    Output:
+        ['p', 'y', 't', 'h', 'o', 'n']
+
+🔸 Using ord() and chr()
+    print(ord('A'))  # ASCII value
+    print(chr(65))   # Character
+
+
+🔹 Implicit Typecasting (Implicit Type Conversion):
+   Data types in Python do not have the same level i.e. ordering of data types is not the same in Python. Some of the 
+   data types have higher-order, and some have lower order. While performing any operations on variables with different 
+   data types in Python, one of the variable's data types will be changed to the higher data type. According to the 
+   level, one data type is converted into other by the Python interpreter itself (automatically). This is called, 
+   implicit typecasting in python.
+
+Python converts a smaller data type to a higher data type to prevent data loss.
+
+🔹 Example of Implicit Typecasting:
+
+# Python automatically converts a to int
+a = 7
+print(type(a))  # <class 'int'>
+
+# Python automatically converts b to float
+b = 3.0
+print(type(b))  # <class 'float'>
+
+# Python automatically converts c to float as it is a float addition
+c = a + b
+print(c)  # 10.0
+print(type(c))  # <class 'float'>
+
+
+🔹 Key Differences: Explicit vs Implicit Typecasting:
+
+| Explicit                  | Implicit           |
+| ------------------------- | ------------------ |
+| Done by programmer        | Done automatically |
+| Uses conversion functions | No functions used  |
+| Full control              | Less control       |
+| Risk of error             | Safe & automatic   |
+
+
+🔹 Summary:
+* Typecasting converts one data type to another
+* Explicit → manual conversion using functions
+* Implicit → automatic conversion by Python
+* Important for avoiding type errors

@@ -1,0 +1,60 @@
+🔹 What is a Module in Python?
+   A module is a file that contains Python code (functions, classes, variables) which can be reused in other programs.
+   Module is like a code library which can be used to borrow the code written by somebody else in our python program. 
+   
+📁 Example:
+    A file named math_utils.py is a module.
+        # math_utils.py
+        def add(a, b):
+            return a + b
+
+Using the module:
+    import math_utils
+    print(math_utils.add(2, 3))
+
+🔹 Types of Modules
+
+1️⃣ Built-in Modules
+   Provided by Python itself.
+   These modules are ready to import and use and ships with the python interpreter. there is no need to install such 
+   modules explicitly.
+
+Examples:
+    * math
+    * sys
+    * os
+    * random
+    * datetime
+
+import math
+print(math.sqrt(25))
+
+2️⃣ User-Defined Modules
+   Modules created by the user.
+
+    # mymodule.py
+    def greet(name):
+        return f"Hello {name}"
+
+    import mymodule
+    print(mymodule.greet("Satyam"))
+
+3️⃣ Third-Party Modules or External Modules
+   Installed using PIP.
+   These modules are imported from a third party file or can be installed using a package manager like pip or conda. 
+   Since this code is written by someone else, we can install different versions of a same module with time
+
+Examples:
+   * numpy
+   * pandas
+   * requests
+   * flask
+
+🔹 Ways to Import Modules
+   import math
+   import math as m
+   from math import sqrt
+   from math import *
+
+✔ Best Practice:
+   from math import sqrt   

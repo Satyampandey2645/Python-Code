@@ -1,0 +1,116 @@
+🧩 Function Arguments in Python
+    When calling a function, we can pass data (arguments) to it.
+    Python supports four types of function arguments:
+
+    1️⃣ Required Arguments
+    2️⃣ Default Arguments
+    3️⃣ Keyword Arguments
+    4️⃣ Variable-Length Arguments
+
+1️⃣ Required Arguments
+    These arguments must be passed in the correct order and correct count.
+
+    ❌ Missing Argument Example
+        def name(fname, mname, lname):
+            print("Hello,", fname, mname, lname)
+
+        name("Peter", "Quill")    
+
+    Error:
+        TypeError: name() missing 1 required positional argument: 'lname'   
+
+    ✅ Correct Example
+        def name(fname, mname, lname):
+            print("Hello,", fname, mname, lname)
+
+        name("Peter", "Ego", "Quill")
+
+    Output:
+        Hello, Peter Ego Quill
+
+2️⃣ Default Arguments
+    A default value is assigned to a parameter.
+    If no value is passed during the function call, the default value is used.
+
+    Example:
+        def name(fname, mname="John", lname="Watson"):
+            print("Hello,", fname, mname, lname)
+
+        name("Amy")
+
+    Output:
+        Hello, Amy John Watson
+
+    📌 Default arguments are always defined after required arguments.
+
+3️⃣ Keyword Arguments
+    Arguments are passed using key = value format.
+    ✔ Order does not matter.
+
+    Example:
+        def name(fname, mname, lname):
+            print("Hello,", fname, mname, lname)
+
+        name(mname="Peter", lname="Wesker", fname="Jade")
+
+    Output:
+        Hello, Jade Peter Wesker
+
+4️⃣ Variable-Length Arguments
+    Used when we don’t know how many arguments will be passed.
+
+🔹 (a) Arbitrary Arguments (*args)
+    * Stored as a tuple
+    * Accessed using index
+
+    Example:
+        def name(*names):
+            print("Hello,", names[0], names[1], names[2])
+
+        name("James", "Buchanan", "Barnes")
+
+    Output:
+        Hello, James Buchanan Barnes
+
+🔹 (b) Keyword Arbitrary Arguments (**kwargs)
+    * Stored as a dictionary
+    * Accessed using keys
+
+    Example:
+        def name(**data):
+            print("Hello,", data["fname"], data["mname"], data["lname"])
+
+        name(fname="James", mname="Buchanan", lname="Barnes")
+
+    Output:
+        Hello, James Buchanan Barnes
+
+🔁 return Statement
+    The return statement sends a value back to the function caller.
+
+    📌 A function ends immediately after return.
+
+    Example:
+        def name(fname, mname, lname):
+            return "Hello, " + fname + " " + mname + " " + lname
+
+        print(name("James", "Buchanan", "Barnes"))
+
+    Output:
+        Hello, James Buchanan Barnes
+
+🆚 print() vs return        
+
+| Feature              |  print() |  return  |
+| -------------------- | -------- | -------- |
+| Displays output      | ✅ Yes   | ❌ No   |
+| Sends value back     | ❌ No    | ✅ Yes  |
+| Used in calculations | ❌ No    | ✅ Yes  |
+
+📝 Summary:
+    -> Required arguments must match count and order
+    -> Default arguments use fallback values
+    -> Keyword arguments ignore order
+    -> *args → tuple of values
+    -> **kwargs → dictionary of values
+    -> return sends value back to caller

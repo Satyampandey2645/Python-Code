@@ -1,0 +1,119 @@
+🔹 Docstrings in Python
+
+🔹 What are Docstrings?
+Docstrings (Documentation Strings) are string literals written immediately after the definition of a:
+ * function
+ * method
+ * class
+ * module
+
+They are used to document what the code does, not for execution.
+
+📌 Docstrings are not comments — they are stored in memory and can be accessed at runtime.
+
+    Basic Example of a Docstring:
+        def square(n):
+            """Takes a number n and returns its square"""
+            return n ** 2
+
+        print(square(5))
+
+    Output:
+        25
+
+
+    ✔ The docstring does not appear in output
+    ✔ It only describes the function
+
+🔹 Accessing a Docstring (__doc__):
+    Docstrings are stored in the special attribute __doc__
+
+        print(square.__doc__)
+
+    Output:
+        Takes a number n and returns its square
+
+
+📌 Important:
+Correct attribute name is __doc__, not _doc_
+
+🔹 Multi-line Docstring Example:
+        def add(num1, num2):
+            """
+            Adds two integer numbers.
+
+            Parameters
+            ----------
+            num1 : int
+                First number
+            num2 : int
+                Second number
+
+            Returns
+            -------
+            int
+                Sum of num1 and num2
+            """
+            return num1 + num2
+
+        print(add(2, 3))
+
+    Output:
+        5
+
+🔹 Why Use Docstrings?
+    📖 Helps others understand your code
+    🧠 Useful for documentation tools
+    🧪 Shown in help() function
+    💼 Very important for interviews & professional projects
+
+🔹 Viewing Docstring Using help()
+        help(add)
+
+    This will display the full documentation written in the docstring.
+
+🔹 Docstrings vs Comments (Interview Favorite):
+
+| Feature               | Comments              | Docstrings                    |
+| --------------------- | --------------------- | ----------------------------- |
+| Syntax                | `# comment`           | `""" docstring """`           |
+| Used for              | Explaining code logic | Documenting functions/classes |
+| Accessible at runtime | ❌ No                 | ✅ Yes                       |
+| Stored in memory      | ❌ No                 | ✅ Yes                       |
+| Access method         | Not possible          | `__doc__`                     |
+
+
+🔹 Comments Example:
+        # This function calculates square
+        def square(n):
+            return n ** 2
+
+    ✔ Comment is ignored by Python
+
+🔹 Docstring Example:
+        def square(n):
+            """Returns the square of a number"""
+            return n ** 2
+
+    ✔ Docstring is stored and accessible
+
+🔹 Docstrings in Classes (Extra Knowledge)
+        class Person:
+            """This class represents a person"""
+
+            def __init__(self, name):
+                """Initializes the name of the person"""
+                self.name = name
+
+        print(Person.__doc__)
+
+🔹 Interview One-Liners 🧠
+    * Docstrings are written just after function/class definition
+    * Docstrings are accessed using __doc__
+    * Comments are ignored, docstrings are stored
+    * Docstrings help generate automatic documentation
+
+🔹 Best Practice ✅
+    * Use triple double quotes """ """
+    * Write clear and meaningful descriptions
+    * Include parameters, return values, examples for large functions

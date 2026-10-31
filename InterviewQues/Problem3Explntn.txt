@@ -1,0 +1,40 @@
+    name = "python"
+
+    if name == "java" or "html":  # This condition will always be true
+        print("Login Successful")  # Login Successful -> 
+    else:
+        print("Authentication Failed")  
+
+In this code:
+
+This line:  
+    if name == "java" or "html": 
+
+is interpreted by Python as:
+    if (name == "java") or ("html"):    
+
+Since "html" is a non-empty string, it is always True.
+So the if condition is always True, no matter what name is.
+
+That's why "Login Successful" prints even when:
+    name = "python"
+
+✅ Correct way to write it:   
+    You must compare name to both values explicitly: 
+
+        name = "python"
+
+        if name == "java" or name == "html":
+            print("Login Successful")
+        else:
+            print("Authentication Failed")  # Authentication Failed   
+
+✅ Cleaner and recommended way  (using in):
+    This is more Pythonic and scalable:
+
+        if name in ("java", "html"):
+            print("Login Successful")
+        else:
+            print("Authentication Failed")  # Authentication Failed
+
+

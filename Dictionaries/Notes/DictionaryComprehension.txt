@@ -1,0 +1,99 @@
+📘 Dictionary Comprehension in Python
+    Dictionary comprehension is a short and concise way to create dictionaries from iterables like lists, tuples, or 
+    other dictionaries.
+
+    It is similar to list comprehension, but it creates key–value pairs instead of list elements.
+
+🔹 Syntax:
+    {key_expression : value_expression for item in iterable if condition} 
+
+    Components:
+    * key_expression → key of dictionary
+    * value_expression → value of dictionary
+    * iterable → list, tuple, set, dictionary, range
+    * condition (optional) → filters items   
+
+🔹 Basic Example:
+    Create a dictionary of numbers and their squares
+
+        squares = {x: x*x for x in range(1, 6)}
+        print(squares)
+
+    Output:
+        {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}   
+
+🔹 Using Condition in Dictionary Comprehension
+    Only even numbers
+
+        even_squares = {x: x*x for x in range(1, 11) if x % 2 == 0}
+        print(even_squares)
+
+    Output:
+        {2: 4, 4: 16, 6: 36, 8: 64, 10: 100}  
+
+🔹 Creating Dictionary from a List
+
+        names = ["Alice", "Bob", "Charlie"]
+
+        name_length = {name: len(name) for name in names}
+        print(name_length)
+
+    Output:
+        {'Alice': 5, 'Bob': 3, 'Charlie': 7}  
+
+🔹 Creating Dictionary from Another Dictionary
+
+    Example: Convert values to uppercase
+
+        info = {'name': 'karan', 'city': 'delhi', 'country': 'india'}
+
+        upper_info = {k: v.upper() for k, v in info.items()}
+        print(upper_info)
+
+    Output:
+        {'name': 'KARAN', 'city': 'DELHI', 'country': 'INDIA'}    
+
+🔹 Swapping Keys and Values
+
+        original = {'a': 1, 'b': 2, 'c': 3}
+
+        swapped = {v: k for k, v in original.items()}
+        print(swapped)
+
+    Output:
+        {1: 'a', 2: 'b', 3: 'c'}
+
+    ⚠️ Keys must be unique after swapping, or data may be lost. 
+
+🔹 Using Conditional Expressions (if-else)
+
+        numbers = [1, 2, 3, 4, 5]
+
+        result = {x: "Even" if x % 2 == 0 else "Odd" for x in numbers}
+        print(result)
+
+    Output:
+        {1: 'Odd', 2: 'Even', 3: 'Odd', 4: 'Even', 5: 'Odd'}     
+
+🔹 Dictionary Comprehension vs Normal Loop
+
+    Normal Way:
+        squares = {}
+        for x in range(1, 6):
+            squares[x] = x*x
+
+    Using Dictionary Comprehension:
+        squares = {x: x*x for x in range(1, 6)}   
+
+    ✔ Cleaner
+    ✔ Faster
+    ✔ More Pythonic
+
+🔥 Interview Key Points:
+    * Dictionary comprehension creates dictionaries in one line
+    * Faster and cleaner than traditional loops
+    * Supports conditions and if-else
+    * Works with lists, tuples, sets, ranges, and dictionaries
+
+🧠 One-Line Interview Answer:
+    Dictionary comprehension is a concise syntax to create dictionaries using expressions and loops in a single line.    

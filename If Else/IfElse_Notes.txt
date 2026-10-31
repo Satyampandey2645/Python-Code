@@ -1,0 +1,75 @@
+🔹 if-else Statements in Python
+   Sometimes a programmer needs to check whether certain expressions evaluate to True or False. Based on this evaluation, 
+   different blocks of code are executed.
+
+   Types of Conditional Statements:
+   1. if
+   2. if-else
+   3. if-elif-else
+   4. Nested if-else-elif
+
+🔹 if-else Statement
+   Working:
+    * If the condition evaluates to True, the if block is executed.
+    * If the condition evaluates to False, the else block is executed.
+    * After execution, control moves outside the if-else block.
+
+   Example:
+        applePrice = 210
+        budget = 208
+
+        if applePrice <= budget:
+            print("Alexa, add 1 kg Apples to the cart.")
+        else:
+            print("Alexa, do not add Apples to the cart.")
+
+   Output:
+        Alexa, do not add Apples to the cart.
+
+🔹 elif Statement
+   Sometimes we need to check multiple conditions. This is done using the elif keyword.
+   
+   Working:
+    * First, the if condition is checked.
+    * If it is False, the elif condition(s) are checked one by one.
+    * If none of the conditions are True, the else block is executed.
+
+   Example:
+        num = 0
+
+        if num < 0:
+            print("Number is negative.")
+        elif num == 0:
+            print("Number is Zero.")
+        else:
+            print("Number is positive.")
+
+   Output:
+        Number is Zero.
+
+🔹 Nested if Statements
+   We can use if, elif, or else statements inside another if block. This is called nested if.
+
+   Example:
+        num = 18
+
+        if num < 0:
+            print("Number is negative.")
+        elif num > 0:
+            if num <= 10:
+                print("Number is between 1-10")
+            elif num > 10 and num <= 20:
+                print("Number is between 11-20")
+            else:
+                print("Number is greater than 20")
+        else:
+            print("Number is zero")
+
+   Output:
+        Number is between 11-20
+
+🔑 Key Points to Remember:
+    -> Use == for comparison, not =
+    -> Indentation is mandatory in Python
+    -> Conditions are checked top to bottom
+    -> Only one block executes in an if-elif-else chain   

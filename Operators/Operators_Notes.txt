@@ -1,0 +1,106 @@
+🔹 What is an Operator?
+   An operator is a symbol used to perform operations on variables and values.
+
+🔹 Types of Operators in Python:
+
+1️⃣ Arithmetic Operators: Used for mathematical operations.
+
+| Operator | Name           | Example  | Result |
+| -------- | -------------- | -------- | ------ |
+| `+`      | Addition       | `5 + 2`  | `7`    |
+| `-`      | Subtraction    | `5 - 2`  | `3`    |
+| `*`      | Multiplication | `5 * 2`  | `10`   |
+| `/`      | Division       | `5 / 2`  | `2.5`  |
+| `//`     | Floor Division | `5 // 2` | `2`    |
+| `%`      | Modulus        | `5 % 2`  | `1`    |
+| `**`     | Exponent       | `2 ** 3` | `8`    |
+
+2️⃣ Assignment Operators: Used to assign values.
+
+| Operator | Example  | Same as     |
+| -------- | -------- | ----------- |
+| `=`      | `x = 5`  | —           |
+| `+=`     | `x += 3` | `x = x + 3` |
+| `-=`     | `x -= 2` | `x = x - 2` |
+| `*=`     | `x *= 4` | `x = x * 4` |
+| `/=`     | `x /= 2` | `x = x / 2` |
+
+3️⃣ Comparison (Relational) Operators: Used to compare values (returns True or False).
+
+| Operator | Example  |
+| -------- | -------- |
+| `==`     | `a == b` |
+| `!=`     | `a != b` |
+| `>`      | `a > b`  |
+| `<`      | `a < b`  |
+| `>=`     | `a >= b` |
+| `<=`     | `a <= b` |
+
+4️⃣ Logical Operators: Used to combine conditions.
+
+| Operator | Description           | Example   |
+| -------- | --------------------- | --------- |
+| `and`    | True if both are True | `a and b` |
+| `or`     | True if any is True   | `a or b`  |
+| `not`    | Reverses result       | `not a`   |
+
+5️⃣ Bitwise Operators: Operate on bits.
+
+| Operator | Name        |    |
+| -------- | ----------- | -- |
+| `&`      | AND         |    |
+| `        | `           | OR |
+| `^`      | XOR         |    |
+| `~`      | NOT         |    |
+| `<<`     | Left shift  |    |
+| `>>`     | Right shift |    |
+
+Example: 5 & 3  # 1
+
+6️⃣ Membership Operators: Check membership in a sequence.
+
+| Operator | Example            |
+| -------- | ------------------ |
+| `in`     | `'a' in 'apple'`   |
+| `not in` | `5 not in [1,2,3]` |
+
+7️⃣ Identity Operators: Check if both variables point to the same object.
+
+| Operator | Example      |
+| -------- | ------------ |
+| `is`     | `a is b`     |
+| `is not` | `a is not b` |
+
+8️⃣ Unary Operators: Operate on a single operand.
+
+| Operator | Example |
+| -------- | ------- |
+| `+`      | `+x`    |
+| `-`      | `-x`    |
+| `not`    | `not x` |
+
+🔹 Operator Precedence (High → Low)
+    1. ()
+    2. **
+    3. + - (unary)
+    4. * / // %
+    5. + -
+    6. Comparison
+    7. not
+    8. and
+    9. or
+
+🔹 Example Program
+    a = 10
+    b = 3
+
+    print(a + b)     # Arithmetic
+    print(a > b)     # Comparison
+    print(a and b)   # Logical
+    print(a in [5,10,15])  # Membership 
+
+🔹 Summary
+-> Operators perform operations on values
+-> Python supports many operator types
+-> Boolean operators treat True = 1, False = 0
+-> Important for logic, conditions & calculations       

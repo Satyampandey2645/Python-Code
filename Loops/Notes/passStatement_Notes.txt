@@ -1,0 +1,74 @@
+🔹 pass Statement in Python
+    The pass statement is a null statement.
+    It does nothing when executed.
+
+    👉 It is used when a statement is syntactically required, but you don’t want to write any code yet.
+
+❓ Why do we need pass?
+    Python does not allow empty blocks.
+    So when you don’t want to write logic immediately, you use pass.
+
+🔹 Syntax:
+        pass
+
+🔸 Example: pass in a Loop
+        for i in range(5):
+            pass
+
+   ✔ The loop runs, but no output is produced   
+
+🔸 Example: pass with if Statement
+        x = 10
+
+        if x > 5:
+    pass
+        else:
+            print("x is small")
+
+   ✔ Program runs without error, but nothing happens in if  
+
+🔸 Example: pass in Function
+        def my_function():
+            pass
+
+   ✔ Useful when defining functions for future implementation  
+
+🔸 Example: pass in Class
+        class Student:
+            pass
+
+   ✔ Creates an empty class without errors   
+
+🔁 break, continue, and pass Comparison:
+
+| Statement  | Purpose        | Effect                     |
+| ---------- | -------------- | -------------------------- |
+| `break`    | Exit loop      | Terminates loop completely |
+| `continue` | Skip iteration | Moves to next iteration    |
+| `pass`     | Do nothing     | Placeholder, no effect     |
+
+🔹 Combined Example:
+        for i in range(1, 6):
+            if i == 3:
+                pass
+            elif i == 4:
+                continue
+            elif i == 5:
+                break
+            print(i)
+
+   Output:
+        1
+        2
+        3
+
+   Explanation:
+    * pass → does nothing, prints 3
+    * continue → skips printing 4
+    * break → stops loop at 5
+
+📝 Summary:
+    * pass is a null statement
+    * Used as a placeholder
+    * Prevents syntax errors in empty blocks
+    * Commonly used in loops, functions, classes, and conditionals

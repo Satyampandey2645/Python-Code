@@ -1,0 +1,47 @@
+a = bool("False")
+b = True + a
+print(b)
+
+🔍 Step 1: bool("False")
+   In Python:
+    * Any non-empty string is True
+    * It does not matter what the string contains ("False", "0", "hello")
+
+    a = bool("False")  # True
+
+   So:
+    a = True
+
+🔍 Step 2: True + a
+   In Python:
+    * True is treated as 1
+    * False is treated as 0
+
+   Since a = True → 1
+
+    b = True + a
+    b = 1 + 1
+    b = 2
+
+   ✅ Final Output
+    print(b)
+
+   Output:
+    2    
+
+🧠 Key Concepts Used:
+
+| Expression      | Value  |
+| --------------- | ------ |
+| `bool("False")` | `True` |
+| `True`          | `1`    |
+| `False`         | `0`    |
+| `True + True`   | `2`    |
+
+⭐ Important Takeaway
+    ❗ bool("False") is True, not False
+    ✔ Because only empty values are False:
+        bool("")        # False
+        bool(0)         # False
+        bool(None)      # False
+        bool([])        # False

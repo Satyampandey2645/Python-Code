@@ -1,0 +1,89 @@
+🧩 Python Functions
+    A function is a block of reusable code that performs a specific task.
+    Instead of writing the same code again and again, we define a function once and call it whenever needed.
+
+✔ Functions make programs:
+    * More organized
+    * Easy to read
+    * Easy to maintain
+    * Reusable
+
+🔹 Types of Functions in Python
+    Python supports two main types of functions:
+    1️⃣ Built-in Functions
+    2️⃣ User-Defined Functions    
+
+1️⃣ Built-in Functions
+    These functions are already defined in Python and can be used directly.
+
+    Examples:
+        min(), max(), len(), sum(), type(),
+        range(), dict(), list(), tuple(),
+        set(), print()
+
+Example:    
+    numbers = [1, 2, 3, 4]
+    print(len(numbers))
+    print(max(numbers))
+
+2️⃣ User-Defined Functions
+    Functions created by the programmer to perform specific tasks are called user-defined functions.    
+
+🔹 Syntax of a Function:
+        def function_name(parameters):
+            # code block
+
+Rules:
+    * Use def keyword
+    * Function name should follow variable naming rules
+    * Parentheses () may contain parameters
+    * Colon : is mandatory
+    * Code inside function must be indented  
+
+🔹 Example: Defining a Function
+        def greet():
+            print("Hello! Welcome to Python")      
+
+🔹 Calling a Function
+    To execute a function, we call it by its name.
+        greet()
+
+    Output:
+        Hello! Welcome to Python    
+
+🔹 Function with Parameters
+    Parameters allow us to pass data into a function.
+
+    Example:
+        def name(fname, lname):
+            print("Hello,", fname, lname)
+
+        name("Sam", "Wilson")
+
+    Output:
+        Hello, Sam Wilson  
+
+🔹 Parameters vs Arguments:
+
+| Term       | Meaning                                  |
+| ---------- | ---------------------------------------- |
+| Parameters | Variables used in function definition    |
+| Arguments  | Values passed while calling the function |
+
+🔹 Function Returning a Value
+        def add(a, b):
+            return a + b
+
+        result = add(5, 3)
+        print(result)
+
+   Output:
+        8
+
+📝 Summary:
+    * Functions are reusable blocks of code
+    * Defined using def keyword
+    * Python has built-in and user-defined functions
+    * Functions can accept parameters
+    * Functions can return values using return
+

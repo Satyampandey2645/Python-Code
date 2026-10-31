@@ -1,0 +1,114 @@
+# Explanation of code of files ExceptHandling4.py, ExceptHandling5.py & ExceptHandling6.py
+
+🔹 Why do we need the finally block?
+
+❌ Common Doubt
+    Some people think:
+        “Why do we need a finally block when we can simply write the statement outside the try...except block?”
+
+✅ Correct Answer
+    The finally block is required especially inside functions, because:
+    * A function may return before reaching normal statements
+    * Code written after try...except may never execute
+    * finally always executes, even if:
+        -> return is used
+        -> an exception occurs
+        -> no exception occurs
+
+🔸 Case 1: Code Outside try…except (Normal Execution)
+
+        try:
+            l = [1, 5, 6, 7]
+            i = int(input("Enter the index: "))
+            print(l[i])
+        except:
+            print("Some error occurred")    
+
+        print("I'm always executed")
+
+    📌 Explanation:
+        * Whether exception occurs or not
+        * The program does not exit early
+        * The last print() executes normally
+
+    📌 Works fine outside a function
+
+🔸 Case 2: try…except Inside Function (Without finally)
+
+        def func():
+            try:
+                l = [1, 5, 6, 7]
+                i = int(input("Enter the index: "))
+                print(l[i])
+                return 1
+            except:
+                print("Some error occurred") 
+                return 0   
+    
+            print("I'm always executed")  # This will NEVER execute
+
+        x = func()
+        print(x)
+
+    Output (Any case):
+        I'm always executed ❌ (Not printed)
+
+    📌 Explanation:
+        * Function returns from try or except
+        * Code after return is never executed
+        * That print() is unreachable
+
+    📌 This is the real problem
+
+🔸 Case 3: Using finally Block (Correct Way ✅)  
+
+        def func():
+            try:
+                l = [1, 5, 6, 7]
+                i = int(input("Enter the index: "))
+                print(l[i])
+                return 1
+            except:
+                print("Some error occurred") 
+                return 0   
+            finally:
+                print("I'm always executed") 
+
+        x = func()
+        print(x)
+
+    📌 Explanation:
+        * finally runs before returning
+        * Runs whether:
+            -> index is valid
+            -> index is invalid
+            -> exception occurs
+        * Ensures cleanup / final statements always execute
+
+    Output Example:
+    If input is valid:
+        Enter the index: 2
+        6
+        I'm always executed
+        1
+
+    If input is invalid:
+        Enter the index: 10
+        Some error occurred
+        I'm always executed
+        0
+
+🔹 Key Interview Points ⭐
+    * Code after return is unreachable
+    * finally executes even with return
+    * finally is essential inside functions
+    * Used for:
+        -> Cleanup
+        -> Logging
+        -> Closing files
+        -> Guaranteed execution
+
+📝 One-Line Interview Answer 💡
+    The finally block is used to ensure that important code always executes, even when a function returns early or an 
+    exception occurs.
+

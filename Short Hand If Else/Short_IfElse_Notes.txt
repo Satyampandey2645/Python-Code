@@ -1,0 +1,72 @@
+🔹 If … Else in One Line (Ternary Operator):
+    Python provides a shorthand syntax for if-else when:
+    * The condition is simple
+    * Only one statement needs to be executed
+
+    This is also called the ternary conditional operator.
+
+🔹 Basic One-Line If–Else:
+
+    Syntax:
+        value_if_true if condition else value_if_false
+
+    Example:
+        a = 2
+        b = 330
+
+        print("A") if a > b else print("B")
+
+    📌 Explanation:
+        * If a > b → prints "A"
+        * Otherwise → prints "B"   
+
+🔹 One-Line If–Else for Assignment:
+
+    Example:
+        result = value_if_true if condition else value_if_false
+
+    Equivalent to:
+        if condition:
+            result = value_if_true
+        else:
+            result = value_if_false
+
+    📌 Commonly used when assigning values based on a condition.      
+
+🔹 Multiple Conditions in One Line:
+    Python allows nested one-line if-else for multiple conditions.
+
+    Example (3 Conditions):
+        a = 336
+        b = 330
+
+        print("A") if a > b else print("=") if a == b else print("B")
+
+    📌 Explanation:
+        * If a > b → prints "A"
+        * Else if a == b → prints "="
+        * Else → prints "B"       
+
+🔸 Readable Example with Variables:
+        status = "Pass" if marks >= 40 else "Fail"
+        print(status)   
+
+🔹 When to Use One-Line If–Else ✔️
+    ✅ Use when:
+        * Condition is simple
+        * Only one operation is needed
+        * Improves readability
+
+    ❌ Avoid when:
+        * Logic is complex
+        * Multiple statements are required
+        * Code becomes hard to understand
+
+🔹 Conclusion:
+    * One-line if-else is short, clean, and efficient
+    * Best for simple decisions and assignments
+    * For complex logic, always use normal if-else blocks
+
+📝 Interview One-Liner 💡
+    One-line if-else in Python is a shorthand conditional expression used to execute or assign values based on a 
+    condition in a single line.             

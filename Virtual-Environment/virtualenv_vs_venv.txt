@@ -1,0 +1,80 @@
+🔹 virtualenv vs venv (Python Virtual Environments):
+    Both virtualenv and venv are used to create isolated Python environments, but they differ in origin, features, and use 
+    cases.
+
+1️⃣ venv:
+    
+    🔸 What is venv?
+        * venv is a built-in module in Python (from Python 3.3+)
+        * No extra installation required
+
+    🔸 How to create:
+        python -m venv myenv
+
+    🔸 Key Features:
+        ✔ Comes with Python by default
+        ✔ Simple and lightweight
+        ✔ Recommended for beginners
+        ✔ Sufficient for most projects
+
+    🔸 Limitations:
+        ❌ Works only with the current Python version
+        ❌ Fewer advanced options compared to virtualenv
+
+2️⃣ virtualenv
+
+    🔸 What is virtualenv?
+        * virtualenv is a third-party tool
+        * Must be installed using pip
+
+    🔸 Installation:
+        pip install virtualenv
+
+    🔸 How to create:
+        virtualenv myenv
+
+    🔸 Key Features:
+        ✔ Works with multiple Python versions
+        ✔ Faster environment creation
+        ✔ More configuration options
+        ✔ Better for advanced workflows
+
+    🔸 Limitations:
+        ❌ Requires separate installation
+        ❌ Slightly more complex
+
+🔥 Key Differences (Interview Table):
+
+| Feature                   | `venv`      | `virtualenv` |
+| ------------------------- | ----------- | ------------ |
+| Built-in                  | ✅ Yes      | ❌ No       |
+| Python version            | Python 3.3+ | Python 2 & 3 |
+| Installation needed       | ❌ No       | ✅ Yes      |
+| Speed                     | Normal      | Faster       |
+| Advanced options          | Limited     | More         |
+| Recommended for beginners | ✅ Yes      | ❌ No       |
+| Production use            | ✅ Yes      | ✅ Yes      |
+
+🔹 When to Use What?
+
+    🔸 Use venv when:
+        * You’re using Python 3
+        * You want a simple setup
+        * You’re a beginner or student
+        * You don’t need multiple Python versions
+
+    🔸 Use virtualenv when:
+        * You need multiple Python versions
+        * You’re working on legacy projects
+        * You want faster creation & flexibility
+        * You’re in advanced or enterprise setups
+
+📝 Interview One-Liners 💡
+    * venv is a built-in Python module for creating virtual environments.
+    * virtualenv is a third-party tool with more features and broader compatibility.
+    * For most modern Python projects, venv is enough.
+
+🔹 Common Interview Question
+
+    Q: Which one should I prefer?
+    👉 venv, unless you specifically need features that virtualenv provides.

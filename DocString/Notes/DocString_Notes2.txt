@@ -1,0 +1,49 @@
+🔹 Why does sqr.__doc__ return None?
+    Because docstrings must be the FIRST statement inside the function body.
+
+In this code, the docstring is placed after a print(n) statement, so Python does NOT treat it as a docstring.
+
+❌ Code (Incorrect Docstring Placement)
+
+        def sqr(n):
+            print(n)
+            '''Takes in a number n, returns the square of n'''
+            print(n**2)
+
+        print(sqr.__doc__)
+
+    Output:
+        None
+
+📌 Reason:
+    * The string is just a normal string literal
+    * Python ignores it as documentation
+    * It is not assigned to __doc__
+
+✅ Correct Way to Write a Docstring
+    Docstring must come immediately after the function definition:
+
+        def sqr(n):
+            '''Takes in a number n, returns the square of n'''
+            print(n)
+            print(n**2)
+
+        print(sqr.__doc__)
+
+    Output:
+        Takes in a number n, returns the square of n
+
+🔑 Golden Rule (Interview Line):
+    A docstring must be the very first statement inside a function, class, or module. Otherwise, Python will ignore it.
+
+📌 Extra Tip
+    Docstrings are not comments.
+    They are stored in memory and accessible using:
+        function_name.__doc__
+
+🔹 Quick Comparison:
+
+| Placement              | Considered Docstring? | `__doc__` Value |
+| ---------------------- | --------------------- | --------------- |
+| First line in function | ✅ Yes                | String value    |
+| After any statement    | ❌ No                 | None            |

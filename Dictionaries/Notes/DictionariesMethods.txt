@@ -1,0 +1,114 @@
+📘 Dictionary Methods in Python
+    Python dictionaries provide several built-in methods to manipulate key-value pairs.
+
+🔹 update()
+    The update() method:
+    * Updates the value of an existing key
+    * Adds a new key-value pair if the key does not exist
+
+    Example:
+        info = {'name': 'Karan', 'age': 19, 'eligible': True}
+        print(info)
+
+        info.update({'age': 20})      # update existing key
+        info.update({'DOB': 2001})    # add new key
+
+        print(info)
+
+    Output:
+        {'name': 'Karan', 'age': 19, 'eligible': True}
+        {'name': 'Karan', 'age': 20, 'eligible': True, 'DOB': 2001}
+
+    📝 Interview Note:
+        update() can add multiple key-value pairs at once   
+
+
+🔹 Removing Items from a Dictionary
+
+1️⃣ clear()
+    The clear() method removes all items from the dictionary.
+
+    Example:
+        info = {'name': 'Karan', 'age': 19, 'eligible': True}
+
+        info.clear()
+        print(info)
+
+    Output:
+        {}
+
+    📝 Interview Note:
+        Dictionary still exists, but it becomes empty
+
+2️⃣ pop()
+    The pop() method removes the item with the specified key.
+
+    Example:
+        info = {'name': 'Karan', 'age': 19, 'eligible': True}
+
+        info.pop('eligible')
+        print(info)
+
+    Output:
+        {'name': 'Karan', 'age': 19}
+
+    ⚠️ Important:
+        Raises KeyError if key does not exist
+
+3️⃣ popitem()
+    The popitem() method removes the last inserted key-value pair (Python 3.7+).
+
+    Example:
+        info = {'name': 'Karan', 'age': 19, 'eligible': True, 'DOB': 2003}
+
+        info.popitem()
+        print(info)
+
+    Output:
+        {'name': 'Karan', 'age': 19, 'eligible': True}
+
+    📝 Interview Note:
+        Useful for LIFO (Last In First Out) behavior
+
+4️⃣ del Keyword
+
+    🔸 Deleting a Specific Key
+
+        info = {'name': 'Karan', 'age': 19, 'eligible': True, 'DOB': 2003}
+
+        del info['age']
+        print(info)
+
+    Output:
+        {'name': 'Karan', 'eligible': True, 'DOB': 2003}
+
+    🔸 Deleting the Entire Dictionary
+
+        info = {'name': 'Karan', 'age': 19, 'eligible': True, 'DOB': 2003}
+
+        del info
+        print(info)
+
+    Output:
+        NameError: name 'info' is not defined
+
+    📝 Interview Note:
+        del dict_name deletes the dictionary completely
+
+🔥 Quick Interview Comparison Table:
+
+| Method      | What it Does                 |
+| ----------- | ---------------------------- |
+| `update()`  | Add / update key-value pairs |
+| `clear()`   | Removes all items            |
+| `pop(key)`  | Removes item with given key  |
+| `popitem()` | Removes last inserted item   |
+| `del key`   | Removes specific key         |
+| `del dict`  | Deletes dictionary entirely  |
+
+🎯 One-Line Interview Answers
+    * update() → Adds or updates dictionary items
+    * clear() → Empties the dictionary
+    * pop() → Removes item using key
+    * popitem() → Removes last inserted pair
+    * del → Deletes key or whole dictionary

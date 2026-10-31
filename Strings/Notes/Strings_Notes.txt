@@ -1,0 +1,110 @@
+🔹 Strings in Python
+   In Python, anything enclosed within single quotes (' ') or double quotes (" ") is called a string.
+   A string is a sequence (array) of characters used to store and work with textual / Unicode data.
+
+🔹 Example
+    name = "Harry"
+    print("Hello, " + name)
+
+    Output:
+        Hello, Harry
+
+🔹 Single Quotes vs Double Quotes
+   It does not matter whether strings are enclosed in single or double quotes — the output remains the same.  
+    a = 'Python'
+    b = "Python"
+    print(a, b)
+
+🔹 Printing Quotes Inside a String
+   Sometimes, we need to include quotation marks inside a string.
+
+🔹 Given Statement:
+      He said, "I want to eat an apple".    
+
+✅ Method 1: Using Single Quotes (Recommended)
+         print('He said, "I want to eat an apple".')     
+✔ This is the simplest and most readable method.      
+
+✅ Method 2: Using Escape Character (\)
+         print("He said, \"I want to eat an apple\".")
+
+✅ Method 3: Using Triple Quotes
+         print("""He said, "I want to eat an apple".""")
+
+🔹 Summary
+* Strings are enclosed in ' ' or " "
+* Strings store text / Unicode characters
+* Single and double quotes work the same
+* Use:
+   -> Single quotes → when string contains double quotes
+   -> Escape sequences → for special cases
+   -> Triple quotes → for multi-line or complex text
+
+
+🔹 Multiline Strings in Python
+   If a string contains multiple lines, we can define it using triple quotes (''' or """).
+
+🔹 Example
+   a = """Lorem ipsum dolor sit amet,
+   consectetur adipiscing elit,
+   sed do eiusmod tempor incididunt
+   ut labore et dolore magna aliqua."""
+   print(a)
+
+✔ Triple quotes allow strings to span across multiple lines.   
+
+🔹 Accessing Characters of a String
+   In Python, a string behaves like an array (sequence) of characters.
+      * Each character has an index
+      * Indexing starts from 0
+      * Square brackets [ ] are used to access characters
+
+🔹 Example
+   name = "Harry"
+
+   print(name[0])
+   print(name[1])
+
+   Output
+   H
+   a
+
+🔹 String Index Positions
+   H   a   r   r   y
+   0   1   2   3   4
+
+🔹 Looping Through a String
+   We can loop through each character of a string using a for loop.
+
+🔹 Syntax   
+   for character in string_name:
+      print(character)
+
+🔹 Example
+   name = "Harry"
+
+   for character in name:
+      print(character)
+
+   Output
+   H
+   a
+   r
+   r
+   y
+
+✔ The loop prints each character one by one.
+
+🔹 Important Points
+   * Strings are iterable
+   * Strings are immutable (cannot be changed directly)
+   * Indexing supports positive and negative indices
+
+Example:
+   print(name[-1])  # y
+
+🔹 Summary
+* Triple quotes → Multiline strings
+* Strings are indexed starting from 0
+* Characters accessed using [index]
+* for loop can iterate over strings

@@ -1,0 +1,79 @@
+🔁 Do-While Loop in Python
+    A do-while loop is a type of loop in which the loop body executes at least once, regardless of whether the condition 
+    is True or False.
+    After the first execution, the loop continues only if the condition remains True.
+
+    📌 This is also called an exit-controlled loop.
+
+❓ Does Python Have a Do-While Loop?
+    ❌ No, Python does not have a built-in do-while loop.
+    ✔ However, we can emulate (simulate) do-while behavior using a while loop.
+
+🔹 How to Emulate Do-While Loop in Python
+   The most common approach is:
+    * Use an infinite while True loop
+    * Execute the code at least once
+    * Use an if condition with break to exit the loop    
+
+🔸 Syntax (Emulated Do-While)
+    while True:
+        # loop body (runs at least once)
+
+        if condition_to_stop:
+            break    
+
+🔸 Example: Do-While Loop Emulation
+        while True:
+            number = int(input("Enter a positive number: "))
+            print(number)
+
+            if not number > 8:
+                break
+
+   Output:
+        Enter a positive number: 1
+        1
+        Enter a positive number: 4
+        4
+        Enter a positive number: -1
+        -1    
+
+🧠 Explanation
+    * while True creates an infinite loop
+    * Code inside the loop executes at least once
+    * User input is taken every time
+    * The if condition checks whether number > 8
+    * If the condition becomes False, break exits the loop
+    * Program continues normally after the loop           
+
+🔸 Another Simple Example
+        i = 1
+
+        while True:
+            print(i)
+            i += 1
+
+            if i > 5:
+                break
+
+   Output:
+        1
+        2
+        3
+        4
+        5
+
+🆚 While Loop vs Do-While Loop
+
+| Feature                | while loop        | do-while (emulated)   |
+| ---------------------- | ----------------- | --------------------- |
+| Condition check        | Before execution  | After first execution |
+| Executes at least once | ❌ Not guaranteed | ✅ Guaranteed        |
+| Built-in in Python     | ✅ Yes            | ❌ No                |
+
+📝 Summary:
+    * Python does not support do-while loop directly
+    * Do-while loop executes at least once
+    * It is an exit-controlled loop
+    * Can be emulated using while True and break
+    * Useful when code must run at least once

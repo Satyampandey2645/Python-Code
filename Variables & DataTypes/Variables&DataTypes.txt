@@ -1,0 +1,109 @@
+🔹 What is Variable?
+   Variable is like a container that holds data. Creating a Variable is like creating a placeholder in memory and 
+   assigning it some value.
+
+   Example: 
+      a = 1;
+      b = True;
+      c = "Satyam"
+      d = None
+   These are four variables of different data types.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+🔹 What is Data Type?
+   Data type specifies the type of value a variable holds. This is required in programming to do various operations 
+   without causing an error. 
+   Python is dynamically typed, meaning you don’t need to declare the data type explicitly.
+   In python, we can print the type of any variable using "type()" function
+
+   Example:
+      a = 1;
+      print(type(a));
+   
+      b = '1';
+      print(type(b));
+
+By default, python provides the following built-in data types.
+
+1️⃣ Numeric data: int, float, complex
+   🔸 int: Whole numbers. Example: 3,-8,0
+   🔸 float: Decimal numbers. Example: 7.349, -9.0, 0.0000001
+   🔸 complex: Numbers with real and imaginary parts. Example: 6 + 2i
+
+2️⃣ Text data: str
+   🔸 str: Sequence of characters. Example: "Hello World!!!", "Python Programming"
+
+3️⃣ Boolean data:
+   🔸 Boolean data consists of values True or False.
+
+4️⃣ Sequenced data: list, tuple
+   🔸 list (Mutable): A list is an ordered collection of data with elements separated by a comma and enclosed within 
+                      square brackets. Lists are mutable and can be modified after creation.
+
+      Example:
+         list1 = [8, 2.3, [-4, 5], ["apple", "banana"]] 
+         print(list1)
+          
+         Output:
+            [8, 2.3, [-4, 5], ['apple', 'banana']]
+
+   🔸 tuple (Immutable): A tuple is an ordered collection of data with elements separated by a comma and enclosed within
+                         parentheses. Tuples are immutable and cannot be modified after creation.
+
+      Example:
+         tuple1 = (("parrot", "sparrow"), ("Lion", "Tiger"))  
+         print(tuple1);
+
+         Output:
+            (('parrot', 'sparrow'), ('Lion', 'Tiger')) 
+
+   🔸 range: Sequence of numbers. Example: r = range(1, 5)     
+
+5️⃣ Mapping Data Type
+   🔸 dict: A dictionary is an unordered collection of data containing a key:value pair. The key:value pairs are enclosed
+            within curly brackets.
+
+      Example: 
+         dict1 = {"name":"Satyam", "age": 21, "canVote": True}
+         print(dict1);
+                      
+         Output:
+            {'name': 'Satyam', 'age': 21, 'canVote': True}
+
+6️⃣ Set Data Types
+   🔸 set (Mutable): Unordered, unique elements. Example: ids = {1, 2, 3}
+
+   🔸 frozenset (Immutable): Example: fs = frozenset([1, 2, 3])
+
+7️⃣ None Type
+   🔸 NoneType: Represents no value. Example: x = None
+
+
+🔹 Mutable vs Immutable:
+
+| Mutable   | Immutable |
+| --------- | --------- |
+| list      | int       |
+| dict      | float     |
+| set       | tuple     |
+| bytearray | string    |
+
+
+🔹 Summary Table:
+
+| Data Type | Example  |
+| --------- | -------- |
+| int       | 10       |
+| float     | 3.14     |
+| complex   | 2+3j     |
+| str       | "Python" |
+| list      | [1,2,3]  |
+| tuple     | (1,2,3)  |
+| dict      | {"a":1}  |
+| set       | {1,2}    |
+| bool      | True     |
+| None      | None     |
+
+🔹 Conclusion:
+   Python provides rich built-in data types, making it flexible and powerful for all kinds of applications.

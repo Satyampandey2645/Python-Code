@@ -1,0 +1,59 @@
+The syntax of a print statement looks something like this: 
+   print(object(s), sep=' ', end='\n', file=sys.stdout, flush=False)
+
+👉 In practice, we mostly use:
+   print(value)   
+
+🔹 Important Parameters of print():
+
+   🔸 *objects
+      One or more objects to print.
+      Multiple Objects are separated by the sep parameter.
+         print("Hello", "World", 123)
+
+   🔸 sep (Separator)
+      Used between multiple values to separate.
+      Default: ' '(space)
+         print("2025", "09", "18", sep="-")
+
+      Output:
+         2025-09-18
+
+   🔸 end
+      Controls what is printed at the end.
+      Default" '\n'(newline)
+         print("Hello", end=" ")
+         print("World")
+
+      Output:
+         Hello World
+
+   🔸 file
+      Used to print output to a file.
+         with open("data.txt", "w") as f:
+         print("Hello File", file=f)     
+
+   🔸 flush
+      Forces immediate output.
+      if True, forcibly flushes the output buffer immediately.
+      Default: False
+         print("Loading...", flush=True)
+
+🔹 Formatted Printing
+   
+   1️⃣ f-string (Recommended)
+         name = "Satyam"
+         age = 21
+         print(f"My name is {name} and I am {age} years old")
+
+   2️⃣ format() Method
+         print("My name is {} and age is {}".format("Satyam", 21))
+
+   3️⃣ Old Style Formatting
+         print("Age is %d" % 21) 
+
+🔹 Summary
+   * print() is a built-in function
+   * Can print strings, variables, multiple values
+   * Supports sep, end, file, flush
+   * f-strings are best for formatting

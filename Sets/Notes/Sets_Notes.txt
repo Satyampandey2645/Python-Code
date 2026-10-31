@@ -1,0 +1,100 @@
+🔹 Python Sets
+
+📌 What is a Set?
+    A set is an unordered collection of unique data items.
+    Sets are used to store multiple values in a single variable.
+
+Key Characteristics of Sets
+ * Unordered (no fixed position)
+ * Unindexed (cannot access using index)
+ * No duplicate elements
+ * Mutable (you can add/remove items)
+ * Written using curly braces {}
+
+🧱 Creating a Set:
+
+    Example:
+        info = {"Carla", 19, False, 5.9, 19}
+        print(info)
+
+    Output (order may vary):
+        {False, 19, 5.9, 'Carla'}
+
+    Explanation:
+    * Duplicate value 19 is removed
+    * Order is random
+    * Sets automatically remove duplicates
+
+⚠️ Important Note (Very Common Interview Point)
+
+        False == 0  # True
+        True == 1   # True
+
+    So in sets:
+        {False, 0, True, 1}
+
+    Becomes:
+        {False, True}
+
+❌ Sets Do NOT Support Indexing
+    You cannot access elements using index numbers because sets are unordered.
+        info[0]   # ❌ Error
+
+❓ Quick Quiz: Create an Empty Set
+    
+    ❌ Wrong way:
+        s = {}
+        print(type(s))   # dict
+
+    ✅ Correct way:
+        s = set()
+        print(type(s))   # <class 'set'>
+
+🔁 Accessing Set Items
+    Using a for Loop
+
+    Since sets are unordered, we use loops to access elements.
+
+    Example:
+        info = {"Carla", 19, False, 5.9}
+
+        for item in info:
+            print(item)
+
+    Sample Output (order may vary):
+        False
+        Carla
+        19
+        5.9
+
+➕ Modifying Sets
+    Sets are mutable, so you can add or remove elements.
+
+    Add items:
+        info.add("Python")
+
+    Remove items:
+        info.remove(19)
+
+🔧 Common Set Methods (Interview Important)
+
+| Method         | Description                          |
+| -------------- | ------------------------------------ |
+| add()          | Adds an element                      |
+| remove()       | Removes element (error if not found) |
+| discard()      | Removes element (no error)           |
+| pop()          | Removes random element               |
+| clear()        | Removes all elements                 |
+| union()        | Combines two sets                    |
+| intersection() | Common elements                      |
+| difference()   | Difference of sets                   |
+
+📝 One-Line Exam Answer:
+    A set is an unordered collection of unique elements in Python that does not allow duplicate values.
+
+🔥 Summary (Revision Box)
+    * {} → set with elements
+    * set() → empty set
+    * No duplicates
+    * No indexing
+    * Order not guaranteed

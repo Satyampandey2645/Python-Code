@@ -1,0 +1,45 @@
+Code:
+    a = [1, 2, 3]
+    print(a * 2 is a + a)
+
+Step 1: What does a * 2 do?
+        a * 2
+
+    ➡️ Creates a new list
+        [1, 2, 3, 1, 2, 3]
+
+Step 2: What does a + a do?
+        a + a
+
+    ➡️ Also creates a new list
+        [1, 2, 3, 1, 2, 3]
+
+    So values are same, but…
+
+Step 3: What does is check?
+        ❌ is does NOT check values
+        ✅ is checks memory location (same object or not)
+
+    Think of it like:
+        Two notebooks with same content ≠ same notebook
+
+Step 4: Memory idea (very important)
+        a * 2  →  [1,2,3,1,2,3]   (object A)
+        a + a  →  [1,2,3,1,2,3]   (object B)
+
+    -> Content: same ✔️
+    -> Memory location: different ❌
+
+    So:
+        a * 2 is a + a   # False
+
+Step 5: Difference between == and is
+        == → compares values
+            print(a * 2 == a + a)  # True
+
+        is → compares identity (memory)
+            print(a * 2 is a + a)  # False
+
+One-line rule to remember 🧠
+    -> == checks “same value”
+    -> is checks “same object”

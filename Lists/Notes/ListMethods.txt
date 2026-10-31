@@ -1,0 +1,237 @@
+🔹 Python List Methods
+    List methods are built-in functions used to perform operations on lists like sorting, adding, removing, counting, etc.
+
+1️⃣ sort()
+    This method sorts the list in ascending order by default.
+    ⚠️ It modifies the original list.
+
+    Example: Sorting Strings
+        colors = ["violet", "indigo", "blue", "green"]
+        colors.sort()
+        print(colors)
+
+    Output:
+        ['blue', 'green', 'indigo', 'violet']    
+
+    Example: Sorting Numbers
+        num = [4,2,5,3,6,1,2,1,2,8,9,7]
+        num.sort()
+        print(num)
+
+    Output:
+        [1, 1, 2, 2, 2, 3, 4, 5, 6, 7, 8, 9]    
+
+🔽 Sorting in Descending Order
+    Use reverse=True
+
+    Example:    
+        colors.sort(reverse=True)
+        num.sort(reverse=True)
+
+    Output:
+        ['violet', 'indigo', 'green', 'blue']
+        [9, 8, 7, 6, 5, 4, 3, 2, 2, 2, 1, 1]
+
+    📌 Default value of reverse is False   
+
+2️⃣ reverse()
+    This method reverses the current order of the list.
+    ⚠️ It does NOT sort, it only flips the list.
+
+    Example:
+        colors = ["violet", "indigo", "blue", "green"]
+        colors.reverse()
+        print(colors)
+
+    Output:
+        ['green', 'blue', 'indigo', 'violet']     
+
+🔑 Difference: sort() vs reverse():
+
+| Method      | What it does               |
+| ----------- | -------------------------- |
+| `sort()`    | Arranges elements in order |
+| `reverse()` | Just reverses current list |
+
+3️⃣ index()
+    Returns the index of the first occurrence of the given value.
+
+    Example:
+        colors = ["violet", "green", "indigo", "blue", "green"]
+        print(colors.index("green"))
+
+    Output:
+        1
+
+    Example:
+        num = [4,2,5,3,6,1,2,1,3,2,8,9,7]
+        print(num.index(3))
+
+    Output:
+        3
+
+4️⃣ count()
+    Returns how many times a value appears in the list.
+
+    Example:
+        colors = ["violet", "green", "indigo", "blue", "green"]
+        print(colors.count("green"))
+
+    Output:
+        2
+
+    Example:
+        num = [4,2,5,3,6,1,2,1,3,2,8,9,7]
+        print(num.count(2))
+
+    Output:
+        3
+
+5️⃣ copy()
+    Creates a duplicate list so original list is not affected.
+
+    Example:
+        colors = ["violet", "green", "indigo", "blue"]
+        newlist = colors.copy()
+
+        print(colors)
+        print(newlist)
+
+    Output:
+        ['violet', 'green', 'indigo', 'blue']
+        ['violet', 'green', 'indigo', 'blue']
+
+6️⃣ append()
+    Adds one element at the end of the list.
+
+    Example:
+        colors = ["violet", "indigo", "blue"]
+        colors.append("green")
+        print(colors)
+
+    Output:
+        ['violet', 'indigo', 'blue', 'green']
+
+7️⃣ insert()
+    Inserts an element at a specific index.
+
+    Example:
+        colors = ["violet", "indigo", "blue"]
+        colors.insert(1, "green")
+        print(colors)
+
+    Output:
+        ['violet', 'green', 'indigo', 'blue']
+
+8️⃣ extend()
+    Adds another list or collection to the current list.
+
+    Example:
+        colors = ["violet", "indigo", "blue"]
+        rainbow = ["green", "yellow", "orange", "red"]
+
+        colors.extend(rainbow)
+        print(colors)
+
+    Output:
+        ['violet', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red']
+
+9️⃣ List Concatenation (+)
+    Joins two lists into a new list.
+
+    Example:
+        colors1 = ["violet", "indigo", "blue", "green"]
+        colors2 = ["yellow", "orange", "red"]
+
+        print(colors1 + colors2)
+
+    Output:
+        ['violet', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red']
+
+🔟 remove()
+    Removes the first occurrence of the specified value from the list.
+
+    Syntax:
+        list.remove(value)
+
+    Example:
+        colors = ["red", "green", "blue", "green"]
+        colors.remove("green")
+        print(colors)
+
+    Output:
+        ['red', 'blue', 'green']
+
+    📌 If the value is not present, Python throws an error.
+
+1️⃣1️⃣ pop()
+    Removes and returns the element at the given index.
+    If no index is given, it removes the last element.
+
+    Example 1: Without index
+        num = [10, 20, 30, 40]
+        num.pop()
+        print(num)
+
+    Output:
+        [10, 20, 30]
+
+    Example 2: With index
+        num = [10, 20, 30, 40]
+        num.pop(1)
+        print(num)
+
+    Output:
+        [10, 30, 40]        
+
+🔁 Difference: remove() vs pop():
+
+| remove()            | pop()                |
+| ------------------- | -------------------- |
+| Uses value          | Uses index           |
+| Removes first match | Removes position     |
+| No return value     | Returns removed item |
+
+1️⃣2️⃣ clear()
+    Removes all elements from the list.
+
+    Example:
+        colors = ["red", "green", "blue"]
+        colors.clear()
+        print(colors)
+
+    Output:
+        []
+
+1️⃣3️⃣ del keyword (Important)
+    Deletes list items or the entire list.
+
+    Example: Delete element by index
+        colors = ["red", "green", "blue"]
+        del colors[1]
+        print(colors)
+
+    Output:
+        ['red', 'blue']
+
+    Example: Delete entire list
+        del colors
+
+    ⚠️ After this, using colors will cause an error.        
+
+🔹 Summary Table (Full List Methods):
+
+| Method    | Purpose            |
+| --------- | ------------------ |
+| sort()    | Sort list          |
+| reverse() | Reverse list       |
+| index()   | Find position      |
+| count()   | Count items        |
+| copy()    | Copy list          |
+| append()  | Add one item       |
+| insert()  | Add at index       |
+| extend()  | Add multiple items |
+| remove()  | Remove by value    |
+| pop()     | Remove by index    |
+| clear()   | Empty list         |
+

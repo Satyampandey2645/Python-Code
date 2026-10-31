@@ -1,0 +1,104 @@
+🔁 Match Case Statements in Python
+    Python provides match–case statements to implement switch-case–like behavior, similar to languages like C, C++ or Java.
+📌 Match-case was introduced in Python 3.10.
+
+❓ Why Match Case?
+   -> It is an alternative to long if-elif-else chains
+   -> Makes code cleaner and more readable
+   -> Useful when checking one variable against many values
+
+🧠 How Match Case Works
+    A match statement:
+     -> Takes a variable
+     -> Compares it with different patterns (cases)
+     -> Executes the code of the first matching case
+     -> Stops checking further cases
+
+🔹 Main Components of Match Case
+    1. match keyword
+    2. case clauses
+    3. patterns / expressions
+
+🧾 Syntax:
+    match variable_name:
+        case pattern1:
+            statement1
+        case pattern2:
+            statement2
+        case _:
+            default_statement
+ 
+🔹 _ is a wildcard (acts like else)
+
+✅ Basic Example:
+    x = 2
+
+    match x:
+        case 1:
+            print("One")
+        case 2:
+            print("Two")
+        case 3:
+            print("Three")
+        case _:
+            print("Invalid number")
+
+    Output:
+        Two        
+
+🔸 Match Case with Conditions (Guarded Case)
+    We can add conditions using if inside a case.
+
+    Example:       
+        x = 4
+
+        match x:
+            case 0:
+                print("x is zero")
+
+            case 4 if x % 2 == 0:
+                print("x % 2 == 0 and case is 4")
+
+            case _ if x < 10:
+                print("x is less than 10")
+
+            case _:
+                print(x)
+
+    Output:
+        x % 2 == 0 and case is 4   
+
+🧩 Explanation of Above Example
+    * match x: → value of x is checked
+    * case 0: → skipped because x ≠ 0
+    * case 4 if x % 2 == 0: → ✅ matched
+    * Remaining cases are not checked      
+
+🔹 Default Case (_)
+        case _:
+            print("Default case")
+
+    * Executes only if no other case matches
+    * Similar to else in if-else               
+
+🆚 Match Case vs If-Else:
+
+| Feature              | match-case | if-elif-else |
+| -------------------- | ---------- | ------------ |
+| Readability          | High       | Medium       |
+| Multiple comparisons | Easy       | Complex      |
+| Default option       | `_`        | `else`       |
+| Python version       | 3.10+      | All versions |
+
+⚠️ Important Notes
+    * Match-case works only in Python 3.10 or later
+    * No need to use break
+    * Only the first matching case executes
+    * _ is mandatory for default behavior
+
+📝 Summary (Exam-Ready)
+    * Match-case is Python’s switch-case alternative
+    * Introduced in Python 3.10
+    * Uses match and case
+    * _ represents default case
+    * Cleaner than multiple if-elif-else statements
